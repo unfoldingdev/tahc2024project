@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_ROUTE116",
-      "offset": -80,
+      "offset": -66,
       "direction": "up"
     },
     {
@@ -129,7 +129,9 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "sign",

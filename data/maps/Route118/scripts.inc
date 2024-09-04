@@ -22,6 +22,17 @@ Route118_OnFrame:
 	map_script_2 VAR_SHOULD_END_ABNORMAL_WEATHER, 1, AbnormalWeather_EventScript_EndEventAndCleanup_1
 	.2byte 0
 
+Route118_EventScript_Berries::
+	msgbox Route118_Text_BerriesPlanted, MSGBOX_SIGN
+	end
+
+Route118_Text_BerriesPlanted:
+	.string "The crops seem to be doing well. They\n"
+	.string "won't need any attention for a while.$"
+
+
+
+
 Route118_EventScript_GoodRodFisherman::
 	lock
 	faceplayer
