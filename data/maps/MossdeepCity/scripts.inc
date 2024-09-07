@@ -17,6 +17,75 @@ MossdeepCity_OnTransition:
 	call_if_set FLAG_SYS_WEATHER_CTRL, Common_EventScript_SetAbnormalWeather
 	end
 
+
+
+
+MossdeepCity_EventScript_Fisherman::
+	msgbox MossdeepCity_Text_Fisherman, MSGBOX_DEFAULT
+	release
+	end
+
+MossdeepCity_Text_Fisherman:
+	.string "Boy, I sure hope nothing happens\n"
+	.string "today that destroys my way of life.$"
+
+
+MossdeepCity_EventScript_FreshWater::
+	msgbox MossdeepCity_Text_FreshWater, MSGBOX_DEFAULT
+	release
+	end
+
+MossdeepCity_Text_FreshWater:
+	.string "Did you know that Fresh Water has the\n"
+	.string "best healing to cost ratio?\p"
+	.string "Potions - 15 per HP. Awful.\p"
+	.string "Super Potions - 14 per HP. Bad.\p"
+	.string "Hyper Potions - 7.5 per HP. Better.\p"
+	.string "Max Potions - about the same.\p"
+	.string "Well, unless you have a Max HP Blissey,\n"
+	.string "then it's like 3.5. And only if you heal\l"
+	.string "up from 1 HP.\p"
+	.string "And then... drumroll please...\p"
+	.string "Fresh Waters - 4 per HP. Ooh yeah.\p"
+	.string "I just stocked up!$"
+
+
+
+
+MossdeepCity_EventScript_Walter::
+	msgbox MossdeepCity_Text_Walter, MSGBOX_DEFAULT
+	release
+	end
+
+MossdeepCity_Text_Walter:
+	.string "WALTER: I'm not moving and you\n"
+	.string "can't make me.$"
+
+
+
+MossdeepCity_EventScript_WalterM::
+	msgbox MossdeepCity_Text_WalterM, MSGBOX_DEFAULT
+	release
+	end
+
+MossdeepCity_Text_WalterM:
+	.string "Walter, get out of the way!$"
+
+
+MossdeepCity_EventScript_WalterF::
+	msgbox MossdeepCity_Text_WalterF, MSGBOX_DEFAULT
+	release
+	end
+
+MossdeepCity_Text_WalterF:
+	.string "Walter, we voted on it, fair and square,\n"
+	.string "so we're buying a copy of Haunted\l"
+	.string "Island 2 and playing it tonight.\p"
+	.string "Blocking the door won't change that!$"
+
+
+
+
 MossdeepCity_EventScript_PokefanF::
 	lock
 	faceplayer

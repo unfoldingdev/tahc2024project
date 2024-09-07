@@ -8079,6 +8079,7 @@ BattleScript_SturdyPreventsOHKO::
 BattleScript_DampStopsExplosion::
 	pause B_WAIT_TIME_SHORT
 	call BattleScript_AbilityPopUpScripting
+	@ call BattleScript_AbilityPopUp
 	printstring STRINGID_PKMNPREVENTSUSAGE
 	pause B_WAIT_TIME_LONG
 	moveendto MOVEEND_NEXT_TARGET

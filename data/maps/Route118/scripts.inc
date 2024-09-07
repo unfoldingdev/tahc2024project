@@ -1,4 +1,5 @@
 .set LOCALID_STEVEN, 19
+.set LOCALID_JERK, 10
 
 Route118_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route118_OnTransition
@@ -27,8 +28,57 @@ Route118_EventScript_Berries::
 	end
 
 Route118_Text_BerriesPlanted:
-	.string "The crops seem to be doing well. They\n"
-	.string "won't need any attention for a while.$"
+	.string "Welp, they'll grow slower now, that's\n"
+	.string "for sure.$"
+
+Route118_EventScript_SingleRock::
+	msgbox Route118_Text_SingleRock, MSGBOX_SIGN
+	end
+
+Route118_Text_SingleRock:
+	.string "No need to bother with this right\n"
+	.string "now. Penny's waiting.$"
+
+
+Route118_EventScript_HomesteadSign::
+	msgbox Route118_Text_HomesteadSign, MSGBOX_SIGN
+	end
+
+Route118_Text_HomesteadSign:
+	.string "THE TUMBLEMAS HOMESTEAD$"
+
+
+Route118_EventScript_PushyJerk::
+	//add flag here checkflag then setflag, etc.
+	trainerbattle_single TRAINER_KOICHI, Route118_Text_PushyJerkIntro, Route118_Text_PushyJerkDefeat
+	msgbox Route118_Text_PushyJerkPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+
+Route118_Text_PushyJerkIntro:
+	.string "There you are.\p"
+	.string "Have you put the pieces together yet?\p"
+	.string "You rejected me.\p"
+	.string "Again.\p"
+	.string "I trained a cute, useless Luvdisc just\n"
+	.string "for you.\p"
+	.string "But.\p"
+	.string "It's not useless anymore.$"
+
+Route118_Text_PushyJerkDefeat:
+	.string "Wh-What?$"
+
+Route118_Text_PushyJerkPostBattle:
+	.string "How did you...\p"
+	.string "My Pokemon had a gun and you still won?\p"
+	.string "Okay, hold on now. Let's make a deal.\p"
+	.string "I'll leave you alone forever, and no one\n"
+	.string "finds out that you humiliated me. Okay?\p"
+	.string "GreatIgottarunbye.$"
+
+
+
+
 
 
 

@@ -6,6 +6,7 @@
 .set LOCALID_BOY, 6
 .set LOCALID_WOMAN, 7
 .set LOCALID_EXPERT_F, 8
+.set LOCALID_PENNY, 10
 
 LilycoveCity_PokemonTrainerFanClub_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, LilycoveCity_PokemonTrainerFanClub_OnFrame
@@ -15,8 +16,192 @@ LilycoveCity_PokemonTrainerFanClub_MapScripts::
 	@ See field_specials.c for a breakdown of the Fan Club and its variables
 
 LilycoveCity_PokemonTrainerFanClub_OnFrame:
+	map_script_2 VAR_TEMP_2, 1, LilycoveCity_PokemonTrainerFanClub_OpeningCutscene
 	map_script_2 VAR_LILYCOVE_FAN_CLUB_STATE, 1, LilycoveCity_PokemonTrainerFanClub_EventScript_MeetFirstFans
 	.2byte 0
+
+
+
+
+
+
+
+
+
+//Changes!
+
+LilycoveCity_PokemonTrainerFanClub_OnTransition:
+	call_if_set FLAG_FAN_CLUB_STRENGTH_SHARED, LilycoveCity_PokemonTrainerFanClub_EventScript_End
+	setvar VAR_TEMP_2, 1
+	call LilycoveCity_PokemonTrainerFanClub_EventScript_HideOrShowInterviewer
+	goto_if_eq VAR_LILYCOVE_FAN_CLUB_STATE, 1, LilycoveCity_PokemonTrainerFanClub_EventScript_SetFanMemberPositionsForFirstFanMeeting
+	goto_if_eq VAR_LILYCOVE_FAN_CLUB_STATE, 2, LilycoveCity_PokemonTrainerFanClub_EventScript_UpdateFanMemberPositions
+	call_if_unset FLAG_VISITED_LITTLEROOT_TOWN, LilycoveCity_PokemonTrainerFanClub_EventScript_GiveStarter
+	end
+
+LilycoveCity_PokemonTrainerFanClub_EventScript_End::
+	setvar VAR_TEMP_2, 0
+	end
+
+LilycoveCity_PokemonTrainerFanClub_EventScript_GiveStarter::
+	givemon SPECIES_FERALIGATR, 30
+	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_DEFEATED_PETALBURG_GYM
+	setflag FLAG_RECEIVED_HM_SURF
+	setflag FLAG_BADGE05_GET
+	setflag FLAG_BADGE08_GET
+	setflag FLAG_VISITED_LITTLEROOT_TOWN
+	end
+
+LilycoveCity_PokemonTrainerFanClub_OpeningCutscene::
+	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, LilycoveCity_PokemonTrainerFanClub_FaceUp
+	waitmovement 0
+	delay 100
+	msgbox LilycoveCity_PokemonTrainerFanClub_Text_Opening1, MSGBOX_NPC
+	applymovement LOCALID_PENNY, LilycoveCity_PokemonTrainerFanClub_PennyDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, LilycoveCity_PokemonTrainerFanClub_FaceRight
+	waitmovement 0
+	msgbox LilycoveCity_PokemonTrainerFanClub_Text_Opening2, MSGBOX_NPC
+	applymovement LOCALID_PENNY, LilycoveCity_PokemonTrainerFanClub_PennyUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, LilycoveCity_PokemonTrainerFanClub_FaceUp
+	waitmovement 0
+	msgbox LilycoveCity_PokemonTrainerFanClub_Text_Opening3, MSGBOX_NPC
+	applymovement LOCALID_PENNY, LilycoveCity_PokemonTrainerFanClub_FaceLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, LilycoveCity_PokemonTrainerFanClub_FaceRight
+	waitmovement 0
+	msgbox LilycoveCity_PokemonTrainerFanClub_Text_Opening4, MSGBOX_NPC
+	applymovement LOCALID_PENNY, LilycoveCity_PokemonTrainerFanClub_PennyUp2
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, LilycoveCity_PokemonTrainerFanClub_FaceUp
+	waitmovement 0
+	setflag FLAG_FAN_CLUB_STRENGTH_SHARED
+	setvar VAR_TEMP_2, 0
+	release
+	end
+
+	
+LilycoveCity_PokemonTrainerFanClub_FaceUp:	
+	face_up
+	step_end
+
+LilycoveCity_PokemonTrainerFanClub_FaceLeft:	
+	face_left
+	step_end
+
+LilycoveCity_PokemonTrainerFanClub_FaceRight:	
+	face_right
+	step_end
+
+
+LilycoveCity_PokemonTrainerFanClub_Text_Opening1:
+	.string "PENNY: Hey hun!$"
+
+
+LilycoveCity_PokemonTrainerFanClub_PennyDown:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	step_end
+
+
+LilycoveCity_PokemonTrainerFanClub_Text_Opening2:
+	.string "PENNY: I watered the berries and\n"
+	.string "took care-\p"
+	.string "Ugh, you're still watching the news?\p"
+	.string "I know you want to see what President\n"
+	.string "Maxie's big announcement is, but it\l"
+	.string "won't start for a while.\p"
+	.string "Don't forget you were going to Surf\n"
+	.string "down to Sean's house in Meris Village\l"
+	.string "and pick up my keys!\p"
+	.string "Thanks, hun!$"
+
+LilycoveCity_PokemonTrainerFanClub_PennyUp:
+	walk_up
+	step_end
+
+LilycoveCity_PokemonTrainerFanClub_PennyUp2:
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	set_invisible
+	step_end
+
+LilycoveCity_PokemonTrainerFanClub_Text_Opening3:
+	.string "PENNY: Oh, I almost forgot...$"
+
+
+LilycoveCity_PokemonTrainerFanClub_Text_Opening4:
+	.string "PENNY: I saw that same creepy guy\n"
+	.string "skulking around outside.\p"
+	.string "Ugh, now we gotta get like 'No\n"
+	.string "Tresspassing' signs or something.\p"
+	.string "Anyway, say hi to Sean for me!\p"
+	.string "And don't close my Subnautica game!\n"
+	.string "I'm testing something.$"
+
+
+
+LilycoveCity_PokemonTrainerFanClub_EventScript_Penny::
+	msgbox LilycoveCity_PokemonTrainerFanClub_Text_Penny, MSGBOX_DEFAULT
+	release
+	end
+
+LilycoveCity_PokemonTrainerFanClub_Text_Penny:
+	.string "PENNY: What are you feeling for dinner?\p"
+	.string "I'm thinking something healthy... no,\n"
+	.string "don't give me that look.$"
+
+
+LilycoveCity_PokemonTrainerFanClub_EventScript_TV::
+	msgbox LilycoveCity_PokemonTrainerFanClub_Text_TV, MSGBOX_DEFAULT
+	release
+	end
+
+LilycoveCity_PokemonTrainerFanClub_Text_TV:
+	.string "Nothing but speculation right now.\p"
+	.string "Penny's right - it's not worth\n"
+	.string "watching.$"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 LilycoveCity_PokemonTrainerFanClub_EventScript_MeetFirstFans::
 	lockall
@@ -71,11 +256,6 @@ LilycoveCity_PokemonTrainerFanClub_Movement_LittleGirlHideFromPlayer:
 	walk_in_place_faster_down
 	step_end
 
-LilycoveCity_PokemonTrainerFanClub_OnTransition:
-	call LilycoveCity_PokemonTrainerFanClub_EventScript_HideOrShowInterviewer
-	goto_if_eq VAR_LILYCOVE_FAN_CLUB_STATE, 1, LilycoveCity_PokemonTrainerFanClub_EventScript_SetFanMemberPositionsForFirstFanMeeting
-	goto_if_eq VAR_LILYCOVE_FAN_CLUB_STATE, 2, LilycoveCity_PokemonTrainerFanClub_EventScript_UpdateFanMemberPositions
-	end
 
 LilycoveCity_PokemonTrainerFanClub_EventScript_UpdateFanMemberPositions::
 	special TryLoseFansFromPlayTime

@@ -1,9 +1,32 @@
 LilycoveCity_House1_MapScripts::
 	.byte 0
 
-LilycoveCity_House1_EventScript_ExpertM::
+
+
+
+LilycoveCity_House1_EventScript_Girl::
+	msgbox LilycoveCity_House1_Text_Parallel, MSGBOX_NPC
+	end
+
+LilycoveCity_House1_Text_Parallel:
+	.string "I'm reading about some other parallel\n"
+	.string "universes now.\p"
+	.string "There's one in which people are made\n"
+	.string "of Electric, and others with people\l"
+	.string "made of Fighting, or Fairy, or Flying.\p"
+	.string "Fascinating stuff!$"
+
+
+LilycoveCity_House1_EventScript_Gent::
 	msgbox LilycoveCity_House1_Text_PokemonPartnersNotTools, MSGBOX_NPC
 	end
+
+LilycoveCity_House1_Text_PokemonPartnersNotTools:
+	.string "POKéMON are partners to people.\n"
+	.string "They aren't our tools.\p"
+	.string "Unfortunately, there are some people\n"
+	.string "who fail to understand that…$"
+
 
 LilycoveCity_House1_EventScript_Kecleon::
 	lock
@@ -14,12 +37,6 @@ LilycoveCity_House1_EventScript_Kecleon::
 	waitmoncry
 	release
 	end
-
-LilycoveCity_House1_Text_PokemonPartnersNotTools:
-	.string "POKéMON are partners to people.\n"
-	.string "They aren't our tools.\p"
-	.string "Unfortunately, there are some people\n"
-	.string "who fail to understand that…$"
 
 LilycoveCity_House1_Text_Kecleon:
 	.string "KECLEON: Ruroro?$"

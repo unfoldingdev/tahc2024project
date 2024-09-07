@@ -544,8 +544,8 @@
     {
       "id": "LAYOUT_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F",
       "name": "LittlerootTown_BrendansHouse_2F_Layout",
-      "width": 9,
-      "height": 8,
+      "width": 12,
+      "height": 12,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/LittlerootTown_BrendansHouse_2F/border.bin",
@@ -564,8 +564,8 @@
     {
       "id": "LAYOUT_LITTLEROOT_TOWN_MAYS_HOUSE_2F",
       "name": "LittlerootTown_MaysHouse_2F_Layout",
-      "width": 9,
-      "height": 8,
+      "width": 12,
+      "height": 12,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/LittlerootTown_MaysHouse_2F/border.bin",
@@ -594,8 +594,8 @@
     {
       "id": "LAYOUT_HOUSE2",
       "name": "House2_Layout",
-      "width": 11,
-      "height": 8,
+      "width": 12,
+      "height": 14,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/House2/border.bin",
@@ -894,10 +894,10 @@
     {
       "id": "LAYOUT_MAUVILLE_CITY_BIKE_SHOP",
       "name": "MauvilleCity_BikeShop_Layout",
-      "width": 12,
-      "height": 9,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_BikeShop",
+      "width": 22,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/MauvilleCity_BikeShop/border.bin",
       "blockdata_filepath": "data/layouts/MauvilleCity_BikeShop/map.bin"
     },
@@ -1064,8 +1064,8 @@
     {
       "id": "LAYOUT_LILYCOVE_CITY_POKEMON_TRAINER_FAN_CLUB",
       "name": "LilycoveCity_PokemonTrainerFanClub_Layout",
-      "width": 12,
-      "height": 14,
+      "width": 22,
+      "height": 20,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/LilycoveCity_PokemonTrainerFanClub/border.bin",

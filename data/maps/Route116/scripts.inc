@@ -27,6 +27,186 @@ Route116_OnFrame:
 	map_script_2 VAR_SHOULD_END_ABNORMAL_WEATHER, 1, AbnormalWeather_EventScript_EndEventAndCleanup_1
 	.2byte 0
 
+
+
+Route116_EventScript_Nick::
+	msgbox Route116_Text_Nick, MSGBOX_NPC
+	release
+	end
+
+Route116_Text_Nick:
+	.string "NICK: Hi Chelsea!\p"
+	.string "Nikki's been begging me for a Pokemon,\n"
+	.string "so I finally special-ordered a Psyduck.\p"
+	.string "It's from that breeder that specializes\n"
+	.string "in useless Pokemon to discourage kids.\p"
+	.string "No daughter of mine is going to quit\n"
+	.string "school to chase a foolish dream!\p"
+	.string "It's ability is Damp, and it can only...\p"
+	.string "Well, why don't you battle her and see?$"
+
+
+Route116_EventScript_Nikki::
+	trainerbattle_single TRAINER_JOSE, Route116_Text_NikkiIntro, Route116_Text_NikkiDefeat
+	msgbox Route116_Text_NikkiPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+
+Route116_Text_NikkiIntro:
+	.string "NIKKI: Chel-see! Chel-see! Daddy got\n"
+	.string "me a Pokemon! Wanna see?$"
+
+Route116_Text_NikkiDefeat:
+	.string "Yayyyy, I'm a Pokemon trainer!$"
+
+Route116_Text_NikkiPostBattle:
+	.string "NIKKI: Daddy says that ducky has\n"
+	.string "desplucktive tendencies and shouldn't\l"
+	.string "battle much. But that was fun!$"
+
+
+Route116_EventScript_MagmaGrunt::
+	trainerbattle_single TRAINER_SARAH, Route116_Text_MagmaGruntIntro, Route116_Text_MagmaGruntDefeat
+	msgbox Route116_Text_MagmaGruntPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+
+Route116_Text_MagmaGruntIntro:
+	.string "MAGMA GRUNT: This guy doesn't get it.\n"
+	.string "Fire types are superior to Water types!\p"
+	.string "Fire is a better type, offensively and\n"
+	.string "defensively!\p"
+	.string "It's super effective against four\n"
+	.string "types compared to Water's three!\p"
+	.string "It resists six types compared to\n"
+	.string "Water's four!\p"
+	.string "And this is all before we talk about\n"
+	.string "the BRN status, the best counter\l"
+	.string "to a physical attacker!\p"
+	.string "A counter that powerful physical\n"
+	.string "Fire types are immune to!\p"
+	.string "Clearly, Fire is the superior type.\n"
+	.string "I'll prove it to you!$"
+
+
+Route116_Text_MagmaGruntDefeat:
+	.string "Cheap shot! Taking advantage of the\n"
+	.string "4x weakness? I bet you're really proud!$"
+
+Route116_Text_MagmaGruntPostBattle:
+	.string "MAGMA GRUNT: Oh, you'll see. Soon,\n"
+	.string "you'll see. Maxie is on our side, and\l"
+	.string "he'll make you regret that.$"
+
+
+
+Route116_EventScript_AquaGrunt::
+	trainerbattle_single TRAINER_DAWSON, Route116_Text_AquaGruntIntro, Route116_Text_AquaGruntDefeat
+	msgbox Route116_Text_AquaGruntPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+
+Route116_Text_AquaGruntIntro:
+	.string "AQUA GRUNT: This guy doesn't get it.\n"
+	.string "Water types are superior to Fire types!\p"
+	.string "Water has two weaknesses, and Fire has\n"
+	.string "three. And we have Ice moves for Grass\l"
+	.string "types - it's not like you ever get\l"
+	.string "Electric, Grass, or Water moves!\p"
+	.string "And Water even beats Fire!\p"
+	.string "I haven't even mentioned the powerful\n"
+	.string "Water-only abilities, like Hydration and\l"
+	.string "Water Bubble, or the wide variety of\l"
+	.string "Water types available for any need!\p"
+	.string "How could anyone think the Fire type is\n"
+	.string "better?\p"
+	.string "Let's battle - I'll prove it to him.$"
+
+
+Route116_Text_AquaGruntDefeat:
+	.string "Look at that, you beat me. But, you\n"
+	.string "beat me with a Water type!$"
+
+Route116_Text_AquaGruntPostBattle:
+	.string "AQUA GRUNT: Kinda pathetic, really.\p"
+	.string "I OHKO all his Pokemon and he still\n"
+	.string "doesn't see sense.$"
+
+
+Route116_EventScript_OldLady::
+	msgbox Route116_Text_OldLady, MSGBOX_NPC
+	release
+	end
+
+Route116_Text_OldLady:
+	.string "I can almost touch the bottom here.\p"
+	.string "Ships pass through here once in a while,\n"
+	.string "so it's a great spot to soak.$"
+
+
+Route116_EventScript_Legs::
+	msgbox Route116_Text_Legs, MSGBOX_DEFAULT
+	release
+	end
+
+Route116_Text_Legs:
+	.string "This is deeper water, so it's more\n"
+	.string "dangerous, okay?\p"
+	.string "You have to be more careful here.$"
+
+
+Route116_EventScript_FineLegs::
+	msgbox Route116_Text_FineLegs, MSGBOX_DEFAULT
+	release
+	end
+
+Route116_Text_FineLegs:
+	.string "But why is it more dangerous, mama?\p"
+	.string "It's the same wild Pokemon.$"
+
+
+Route116_EventScript_ShyElectric::
+	trainerbattle_single TRAINER_DOUG, Route116_Text_ShyElectricIntro, Route116_Text_ShyElectricDefeat
+	msgbox Route116_Text_ShyElectricPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+
+Route116_Text_ShyElectricIntro:
+	.string "nononowhydidyoutalktome\p"
+	.string "nowihavetofightyou$"
+
+Route116_Text_ShyElectricDefeat:
+	.string "whyferaligatrwhywhywhytwoattackevs\n"
+	.string "butitsokaybecauseididntwinididntget\l"
+	.string "attackevsformoreselfconfusiondamage$"
+
+Route116_Text_ShyElectricPostBattle:
+	.string "pleasegoawaysoicanhealmypokemonget\n"
+	.string "specialattackevsandnotfightyouagain$"
+
+
+Route116_EventScript_WaterStoneGuy::
+	msgbox Route116_Text_WaterStoneGuy, MSGBOX_DEFAULT
+	release
+	end
+
+Route116_Text_WaterStoneGuy:
+	.string "I've heard you can find WATER STONES\n"
+	.string "floating in the ocean here.\p"
+	.string "I already bought two for my Lombre and\n"
+	.string "my Poliwhirl; I just need one more for\l"
+	.string "my Staryu!$"
+
+
+
+
+
+
+
+
+
+
+
 Route116_EventScript_WandasBoyfriend::
 	lock
 	faceplayer

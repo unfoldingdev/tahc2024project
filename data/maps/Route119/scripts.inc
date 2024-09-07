@@ -24,6 +24,270 @@ Route119_OnTransition:
 	special SetRoute119Weather
 	end
 
+
+
+Route119_EventScript_LedgeGuy::
+	msgbox Route119_Text_LedgeGuy, MSGBOX_NPC
+	end
+
+Route119_Text_LedgeGuy:
+	.string "Okay, I got this far climbing on the\n"
+	.string "seaweed, but there's not enough here.\p"
+	.string "I think we might have to jump for it\n"
+	.string "at that spot right there.$"
+
+
+
+
+
+Route119_EventScript_Nick::
+	msgbox Route119_Text_Nick, MSGBOX_NPC
+	release
+	end
+
+Route119_Text_Nick:
+	.string "NICK: That damn duck keeps exploding!\n"
+	.string "I guess its ability is DRY SKIN now...\p"
+	.string "Whenever I try to get close to her,\n"
+	.string "that duck just explodes my Pokemon!$"
+
+
+
+Route119_EventScript_Nikki::
+	trainerbattle_single TRAINER_TAYLOR, Route119_Text_NikkiIntro, Route119_Text_NikkiDefeat
+	msgbox Route119_Text_NikkiPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+
+Route119_Text_NikkiIntro:
+	.string "NIKKI: Hi Chel   ! ...Oh. Chel. Hi Chel!\n"
+	.string "My duck is really strong now!$"
+
+Route119_Text_NikkiDefeat:
+	.string "Yayyyy!$"
+
+Route119_Text_NikkiPostBattle:
+	.string "NIKKI: I've decided! I want Daddy\n"
+	.string "to get me a full team of duckies!$"
+
+
+
+Route119_EventScript_MagmaGrunt::
+	trainerbattle_single TRAINER_DONALD, Route119_Text_MagmaGruntIntro, Route119_Text_MagmaGruntDefeat
+	msgbox Route119_Text_MagmaGruntPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+
+Route119_Text_MagmaGruntIntro:
+	.string "MAGMA GRUNT: My time has come.\n"
+	.string "Laugh at my 4x weaknesses, will you?$"
+
+Route119_Text_MagmaGruntDefeat:
+	.string "MAGMA GRUNT: What?!\n"
+	.string "I had every advantage!$"
+
+Route119_Text_MagmaGruntPostBattle:
+	.string "MAGMA GRUNT: Now that I look at it,\n"
+	.string "Magcargo still has a 4x weakness\l"
+	.string "against Ground.\p"
+	.string "That's it!\p"
+	.string "I'll just petition Maxie to outlaw the\n"
+	.string "ground, too!$"
+
+
+Route119_EventScript_AquaGrunt::
+	trainerbattle_single TRAINER_BRENT, Route119_Text_AquaGruntIntro, Route119_Text_AquaGruntDefeat
+	msgbox Route119_Text_AquaGruntPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+
+Route119_Text_AquaGruntIntro:
+	.string "GRUNT: What happened to my team?!\p"
+	.string "What happened to my name?!$"
+
+Route119_Text_AquaGruntDefeat:
+	.string "GRUNT: Wait, 'fall' does damage to\n"
+	.string "yourself for no benefit?!$"
+
+Route119_Text_AquaGruntPostBattle:
+	.string "GRUNT: I can't believe it. Maxie\n"
+	.string "really outlawed Wa-... you know.\p"
+	.string "He crippled my team!\p"
+	.string "He broke my 500 game win streak\n"
+	.string "against that Magma Grunt!\p"
+	.string "And worst of all, he changed my name\n"
+	.string "to Team Grunt, which sounds like a\l"
+	.string "caveman football league!$"
+
+
+Route119_EventScript_ShyElectric::
+	trainerbattle_single TRAINER_GREG, Route119_Text_ShyElectricIntro, Route119_Text_ShyElectricDefeat
+	msgbox Route119_Text_ShyElectricPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+
+Route119_Text_ShyElectricIntro:
+	.string "awholetypeisgonehowhowhowhow$"
+
+Route119_Text_ShyElectricDefeat:
+	.string "iwasntpayingattentioniwasthinking\n"
+	.string "aboutthenewmeta$"
+
+Route119_Text_ShyElectricPostBattle:
+	.string "sunwinsweatherwarssofiretypesbuffed\n"
+	.string "meaningstealthrockbuffed...$"
+
+
+Route119_EventScript_OldLady::
+	msgbox Route119_Text_OldLady, MSGBOX_NPC
+	release
+	end
+
+Route119_Text_OldLady:
+	.string "What happened?\p"
+	.string "It was all gone so suddenly!\p"
+	.string "Good thing I had a coverup, eh\n"
+	.string "sweetie?\p"
+	.string "Ehehehehehehe!$"
+
+Route119_EventScript_MyLegs::
+	msgbox Route119_Text_MyLegs, MSGBOX_NPC
+	release
+	end
+
+Route119_Text_MyLegs:
+	.string "AAAAAAAAHHHHHHH MY LEGS!$"
+
+
+Route119_EventScript_MyLegsAreFine::
+	msgbox Route119_Text_MyLegsAreFine, MSGBOX_NPC
+	release
+	end
+
+Route119_Text_MyLegsAreFine:
+	.string "It's okay, my legs are fine!\p"
+	.string "And I understand the dangerous thing\n"
+	.string "now mama!$"
+
+
+
+Route119_EventScript_Captain::
+	msgbox Route119_Text_Captain, MSGBOX_NPC
+	release
+	end
+
+Route119_Text_Captain:
+	.string "In all me years at... well, here, I've\n"
+	.string "never seen anything like this.\p"
+	.string "Me ship and me one true love, both gone\n"
+	.string "in an instant.$"
+
+Route119_EventScript_Refund::
+	msgbox Route119_Text_Refund, MSGBOX_DEFAULT
+	release
+	end
+
+Route119_Text_Refund:
+	.string "It's really very simple.\p"
+	.string "I paid for a trip across...\n"
+	.string "A trip from here to there.\p"
+	.string "I'm not there. You failed to get me all\n"
+	.string "the way there.\p"
+	.string "So, you didn't deliver what I paid for.\p"
+	.string "So, start processing my refund.$"
+
+
+
+Route119_EventScript_NotAccountable::
+	msgbox Route119_Text_NotAccountable, MSGBOX_DEFAULT
+	release
+	end
+
+Route119_Text_NotAccountable:
+	.string "Sir, you cannot possibly be trying to\n"
+	.string "hold the ferry service accountable for\l"
+	.string "the disappearance of the...\p"
+	.string "the path itself.$"
+
+Route119_EventScript_Sailor::
+	msgbox Route119_Text_Sailor, MSGBOX_NPC
+	release
+	end
+
+Route119_Text_Sailor:
+	.string "There must be some way to undo it.\p"
+	.string "But... what would even happen if Maxie\n"
+	.string "just put it all back?\p"
+	.string "This would be a sunken ship!$"
+
+
+Route119_EventScript_Scientist::
+	msgbox Route119_Text_Scientist, MSGBOX_NPC
+	release
+	end
+
+Route119_Text_Scientist:
+	.string "Wow, it's one thing to send out\n"
+	.string "a Seaking in a battle on land, and\l"
+	.string "watch it float in midair...\p"
+	.string "But it's another to see them\n"
+	.string "rolling about here, unconcerned.\p"
+	.string "They actually never needed -it- to\n"
+	.string "survive.$"
+
+
+Route119_EventScript_PokeFanF::
+	msgbox Route119_Text_PokeFanF, MSGBOX_NPC
+	release
+	end
+
+Route119_Text_PokeFanF:
+	.string "This is a perfect opportunity to\n"
+	.string "replace the boring liquid that was\l"
+	.string "here with something more interesting.\p"
+	.string "Gravy, acid, paint... I always wondered\n"
+	.string "why they didn't think out of the box.$"
+
+
+Route119_EventScript_CaveLady::
+	msgbox Route119_Text_CaveLady, MSGBOX_NPC
+	end
+
+Route119_Text_CaveLady:
+	.string "When I took this job, they told me\n"
+	.string "to tell the player about these caves.\p"
+	.string "You know, communicate that they're\n"
+	.string "inaccessible, like as an anti-\l"
+	.string "frustration feature.\p"
+	.string "But, I forgot what the player looks\n"
+	.string "like, so I'm just telling everyone.$"
+
+
+Route119_EventScript_NoStones::
+	lockall
+	faceplayer
+	goto_if_set FLAG_HIDDEN_ITEM_ROUTE_119_MAX_ETHER, Route119_EventScript_NoStonesGiven
+	msgbox Route119_Text_NoStones, MSGBOX_NPC
+	giveitem ITEM_WATER_STONE
+	setflag FLAG_HIDDEN_ITEM_ROUTE_119_MAX_ETHER
+	release
+	end
+
+Route119_Text_NoStones:
+	.string "Oh my god, they're useless!\n"
+	.string "My poor Pokemon!\p"
+	.string "Just look at this!$"
+
+Route119_EventScript_NoStonesGiven::
+	msgbox Route119_Text_NoStones, MSGBOX_NPC
+	release
+	end
+
+Route119_Text_NoStonesGiven:
+	.string "Eviolite Lombre? Is that really\n"
+	.string "what I'm about to do?$"
+
+
 Route119_EventScript_MoveInstituteWorkersDownstairs::
 	setflag FLAG_HIDE_WEATHER_INSTITUTE_2F_WORKERS
 	clearflag FLAG_HIDE_WEATHER_INSTITUTE_1F_WORKERS

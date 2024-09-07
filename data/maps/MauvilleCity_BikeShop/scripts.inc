@@ -1,6 +1,32 @@
 MauvilleCity_BikeShop_MapScripts::
 	.byte 0
 
+
+
+MauvilleCity_BikeShop_EventScript_SinkDry::
+	msgbox MauvilleCity_BikeShop_Text_SinkDry, MSGBOX_DEFAULT
+	release
+	end
+
+MauvilleCity_BikeShop_Text_SinkDry:
+	.string "The taps don't work. The sink's dry.\p"
+	.string "Now that you think about it, the word\n"
+	.string "dry doesn't mean anything anymore.$"
+
+MauvilleCity_BikeShop_EventScript_TV::
+	msgbox MauvilleCity_BikeShop_Text_TV, MSGBOX_DEFAULT
+	release
+	end
+
+MauvilleCity_BikeShop_Text_TV:
+	.string "There's a lot of pundits talking about\n"
+	.string "the big announcement. Blech.$"
+
+
+
+
+
+
 MauvilleCity_BikeShop_EventScript_Rydel::
 	lock
 	faceplayer

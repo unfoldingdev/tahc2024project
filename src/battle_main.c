@@ -542,9 +542,9 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
     },
     [TYPE_DRAGON] =
     {
-        .name = _("Dragon"),
-        .generic = _("a DRAGON move"),
-        .palette = 15,
+        .name = _("     "),
+        .generic = _("a       move"),
+        .palette = 14,
         .zMove = MOVE_DEVASTATING_DRAKE,
         .maxMove = MOVE_MAX_WYRMWIND,
         //.enhanceItem = ITEM_DRAGON_FANG,

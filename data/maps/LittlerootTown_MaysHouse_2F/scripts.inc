@@ -13,6 +13,172 @@ LittlerootTown_MaysHouse_2F_OnTransition:
 	setvar VAR_SECRET_BASE_INITIALIZED, 0
 	end
 
+
+
+
+
+
+PlayersHouseM_2F_EventScript_BedRest::
+	goto_if_set FLAG_HIDE_ROUTE_118_STEVEN, PlayersHouseM_2F_EventScript_AlreadyDitto
+	msgbox PlayersHouseM_2F_Text_WantToSleep, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, PlayersHouseM_2F_EventScript_End
+	goto_if_eq VAR_RESULT, YES, PlayersHouseM_2F_EventScript_SleepInBed
+	end
+
+PlayersHouseM_2F_EventScript_AlreadyDitto::
+	special HealPlayerParty
+	msgbox PlayersHouseM_2F_Text_AlreadyDitto, MSGBOX_DEFAULT
+	release
+	end
+
+PlayersHouseM_2F_Text_AlreadyDitto:
+	.string "You're all healed up. Go explore!$"
+
+
+PlayersHouseM_2F_Text_WantToSleep:
+	.string "Take a little rest?\p"
+	.string "Coming back after all that and\n"
+	.string "immediately going to sleep, without\l"
+	.string "talking to Penny... it'll probably \l"
+	.string "confuse her, but I guess you can.$"
+
+PlayersHouseM_2F_EventScript_End::
+	release
+	end
+
+PlayersHouseM_2F_EventScript_SleepInBed::
+	msgbox PlayersHouseM_2F_Text_Slept, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, PlayersHouseM_2F_EventScript_End
+	goto_if_eq VAR_RESULT, YES, PlayersHouseM_2F_EventScript_DontSleep
+	release
+	end
+
+PlayersHouseM_2F_Text_Slept:
+	.string "She's probably going to stay up,\n"
+	.string "wondering what she did wrong.\p"
+	.string "You're not really doing this, are you?$"
+
+PlayersHouseM_2F_EventScript_DontSleep::
+	msgbox PlayersHouseM_2F_Text_HealYou, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, PlayersHouseM_2F_EventScript_NoWin
+	goto_if_eq VAR_RESULT, YES, PlayersHouseM_2F_EventScript_GoWin
+	release
+	end
+
+PlayersHouseM_2F_Text_HealYou:
+	.string "Look, I'll heal your Pokemon, just\n"
+	.string "go talk to her. That's where the game\l"
+	.string "ends - don't you want to win?$"
+
+PlayersHouseM_2F_EventScript_GoWin::
+	special HealPlayerParty
+	setflag FLAG_HIDE_ROUTE_118_STEVEN
+	msgbox PlayersHouseM_2F_Text_HealedGo, MSGBOX_DEFAULT
+	givemon SPECIES_DITTO, 50
+	release
+	end
+
+PlayersHouseM_2F_Text_HealedGo:
+	.string "Great, great. You're healed up, not\n"
+	.string "that it matters. Go win the game!$"
+
+PlayersHouseM_2F_EventScript_NoWin::
+	special HealPlayerParty
+	msgbox PlayersHouseM_2F_Text_WhatReally, MSGBOX_DEFAULT
+	release
+	end
+
+PlayersHouseM_2F_Text_WhatReally:
+	.string "What, really? Oh, you want to do more\n"
+	.string "exploring? Well that's fine, then!\p"
+	.string "Here, why don't you take this and see\n"
+	.string "how janky everything I made is?$"
+
+
+
+
+
+
+
+PlayersHouseM_2F_EventScript_GameCube::
+	msgbox PlayersHouseM_2F_Text_GameCube, MSGBOX_DEFAULT
+	release
+	end
+
+PlayersHouseM_2F_Text_GameCube:
+	.string "Huh. Wonder what Mario's Down-B\n"
+	.string "looks like now.$"
+
+
+
+PlayersHouseM_2F_EventScript_PennyComp::
+	msgbox PlayersHouseM_2F_Text_PennyComp, MSGBOX_DEFAULT
+	release
+	end
+
+PlayersHouseM_2F_Text_PennyComp:
+	.string "Subnautica sure looks a lot\n"
+	.string "different after the new law.$"
+
+
+PlayersHouseM_2F_EventScript_PennyJournal::
+	msgbox PlayersHouseM_2F_Text_PennyJournal, MSGBOX_DEFAULT
+	release
+	end
+
+PlayersHouseM_2F_Text_PennyJournal:
+	.string "It's Penny's journal. No peeking!$"
+
+
+PlayersHouseM_2F_EventScript_YourJournal::
+	msgbox PlayersHouseM_2F_Text_YourJournal, MSGBOX_DEFAULT
+	release
+	end
+
+PlayersHouseM_2F_Text_YourJournal:
+	.string "It's your journal. To-do list for today:\p"
+	.string "Finish planting the berries\n"
+	.string "Get Penny's keys\l"
+	.string "You can check em all off.$"
+
+
+PlayersHouseM_2F_EventScript_YourComp::
+	msgbox PlayersHouseM_2F_Text_YourComp, MSGBOX_DEFAULT
+	release
+	end
+
+PlayersHouseM_2F_Text_YourComp:
+	.string "It's your computer. You don't have\n"
+	.string "time to do anything on it now.$"
+
+PlayersHouseM_2F_EventScript_TV::
+	msgbox PlayersHouseM_2F_Text_TV, MSGBOX_DEFAULT
+	release
+	end
+
+PlayersHouseM_2F_Text_TV:
+	.string "No need to turn this on right now.$"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 LittlerootTown_MaysHouse_2F_EventScript_CheckShouldUpdateMayPos::
 	goto_if_set FLAG_MET_RIVAL_LILYCOVE, LittlerootTown_MaysHouse_2F_EventScript_TryUpdateMayPos
 	goto_if_ge VAR_BIRCH_LAB_STATE, 2, LittlerootTown_MaysHouse_2F_EventScript_Ret

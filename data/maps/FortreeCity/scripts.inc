@@ -11,9 +11,107 @@ FortreeCity_OnResume:
 	setstepcallback STEP_CB_FORTREE_BRIDGE
 	end
 
-FortreeCity_EventScript_Man::
-	msgbox FortreeCity_Text_SawGiganticPokemonInSky, MSGBOX_NPC
+
+FortreeCity_EventScript_FreshWater::
+	msgbox FortreeCity_Text_WalterL, MSGBOX_NPC
+	giveitem ITEM_ADAMANT_MINT
+	release
 	end
+
+FortreeCity_Text_FreshWater:
+	.string "It's all gone. My beautiful stash\n"
+	.string "of Fresh...\p"
+	.string "Now they've turned into candy.\p"
+	.string "A whole pocketful.\p"
+	.string "How many could I possibly use?\p"
+	.string "Here, take one.$"
+
+
+FortreeCity_EventScript_WalterL::
+	msgbox FortreeCity_Text_WalterL, MSGBOX_SIGN
+	end
+
+FortreeCity_Text_WalterL:
+	.string "There's... a letter L on the\n"
+	.string "ground here?$"
+
+
+FortreeCity_EventScript_NSign::
+	msgbox FortreeCity_Text_NSign, MSGBOX_SIGN
+	end
+
+FortreeCity_Text_NSign:
+	.string "      n's House$"
+
+FortreeCity_EventScript_CitySign1::
+	msgbox FortreeCity_Text_CitySign1, MSGBOX_SIGN
+	end
+
+FortreeCity_Text_CitySign1:
+	.string "Meris Village\p"
+	.string "The only rock around here that can\n"
+	.string "hold multiple low-maintenance people.$"
+
+FortreeCity_EventScript_BillSign::
+	msgbox FortreeCity_Text_BillSign, MSGBOX_SIGN
+	end
+
+FortreeCity_Text_BillSign:
+	.string "Bill's House$"
+
+
+FortreeCity_EventScript_Fisherman::
+	lockall
+	faceplayer
+	goto_if_set FLAG_HIDE_FORTREE_CITY_KECLEON, FortreeCity_EventScript_FishermanRodGiven
+	msgbox FortreeCity_Text_Fisherman, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FortreeCity_EventScript_FishermanNoRod
+	goto_if_eq VAR_RESULT, YES, FortreeCity_EventScript_FishermanYesRod
+	release
+	end
+
+FortreeCity_Text_Fisherman:
+	.string "Hahahahaha!\n"
+	.string "Why didn't anyone think of this before?\p"
+	.string "I don't have to wait around for hours\n"
+	.string "hoping the fish bite!\p"
+	.string "I can just pick fish off the ground!\p"
+	.string "I don't need my rod anymore, do you\n"
+	.string "want it?$"
+
+FortreeCity_EventScript_FishermanNoRod::
+	msgbox FortreeCity_Text_FishermanNoRod, MSGBOX_DEFAULT
+	release
+	end
+
+FortreeCity_Text_FishermanNoRod:
+	.string "Yeah, figured it was useless. Maybe it\n"
+	.string "could be a cat toy... for a faraway cat?$"
+
+FortreeCity_EventScript_FishermanYesRod::
+	setflag FLAG_HIDE_FORTREE_CITY_KECLEON
+	msgbox FortreeCity_Text_FishermanYesRod, MSGBOX_DEFAULT
+	giveitem ITEM_GOOD_ROD
+	release
+	end
+
+FortreeCity_Text_FishermanYesRod:
+	.string "I have no idea what you want it for,\n"
+	.string "but it's all yours!$"
+
+FortreeCity_EventScript_FishermanRodGiven::
+	msgbox FortreeCity_Text_FishermanRodGiven, MSGBOX_DEFAULT
+	release
+	end
+
+FortreeCity_Text_FishermanRodGiven:
+	.string "Ooh. I just realized something.\n"
+	.string "Are these fish safe to eat?\p"
+	.string "Normally they'd be swimming and it would\n"
+	.string "be fine, but now I gotta worry about\l"
+	.string "the five second rule.$"
+
+
 
 FortreeCity_EventScript_Woman::
 	lock

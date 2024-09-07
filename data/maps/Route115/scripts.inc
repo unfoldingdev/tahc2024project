@@ -19,6 +19,65 @@ Route115_OnFrame:
 	map_script_2 VAR_SHOULD_END_ABNORMAL_WEATHER, 1, AbnormalWeather_EventScript_EndEventAndCleanup_1
 	.2byte 0
 
+
+
+Route115_EventScript_Berries::
+	msgbox Route115_Text_Berries, MSGBOX_SIGN
+	end
+
+Route115_Text_Berries:
+	.string "The crops seem to be doing well. They\n"
+	.string "won't need any attention for a while.$"
+
+
+Route115_EventScript_SoloRock::
+	msgbox Route115_Text_SoloRock, MSGBOX_SIGN
+	end
+
+Route115_Text_SoloRock:
+	.string "This is the last rock to move before\n"
+	.string "you can plant berries here, too.$"
+
+
+Route115_EventScript_HomesteadSign::
+	msgbox Route115_Text_HomesteadSign, MSGBOX_SIGN
+	end
+
+Route115_Text_HomesteadSign:
+	.string "THE TUMBLEMAS HOMESTEAD$"
+
+
+
+
+
+Route115_EventScript_PushyJerk::
+	trainerbattle_single TRAINER_KYRA, Route115_Text_PushyJerkIntro, Route115_Text_PushyJerkDefeat
+	msgbox Route115_Text_PushyJerkPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+
+Route115_Text_PushyJerkIntro:
+	.string "Hey look, I know you said you weren't\n"
+	.string "interested and that I needed to stop.\p"
+	.string "But I caught and trained a special\n"
+	.string "Pokemon that not even you can reject!\p"
+	.string "It's the power of my love for you!$"
+
+Route115_Text_PushyJerkDefeat:
+	.string "You just knocked it out.\n"
+	.string "Heartless.$"
+
+Route115_Text_PushyJerkPostBattle:
+	.string "Yeah yeah, I'll leave.\p"
+	.string "But I don't get why you didn't like the\n"
+	.string "Luvdisc. Chicks love shit like that.$"
+
+
+
+
+
+
+
 Route115_EventScript_Woman::
 	msgbox Route115_Text_NeverKnowWhenCavePokemonWillAppear, MSGBOX_NPC
 	end

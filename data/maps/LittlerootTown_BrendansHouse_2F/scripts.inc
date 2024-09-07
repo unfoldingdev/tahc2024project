@@ -13,6 +13,103 @@ LittlerootTown_BrendansHouse_2F_OnTransition:
 	setvar VAR_SECRET_BASE_INITIALIZED, 0
 	end
 
+
+
+PlayersHouseB_2F_EventScript_BedRest::
+	msgbox PlayersHouseB_2F_Text_WantToSleep, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, PlayersHouseB_2F_EventScript_End
+	goto_if_eq VAR_RESULT, YES, PlayersHouseB_2F_EventScript_SleepInBed
+	end
+
+PlayersHouseB_2F_Text_WantToSleep:
+	.string "Take a little rest?\p"
+	.string "The story will probably wait until\n"
+	.string "you're done napping anyway.$"
+
+PlayersHouseB_2F_EventScript_End::
+	release
+	end
+
+PlayersHouseB_2F_EventScript_SleepInBed::
+	special HealPlayerParty
+	msgbox PlayersHouseB_2F_Text_Slept, MSGBOX_DEFAULT
+	release
+	end
+
+PlayersHouseB_2F_Text_Slept:
+	.string "You feel well-rested before you even\n"
+	.string "get into bed. Maybe the story won't\l"
+	.string "have to wait for you after all.$"
+
+
+
+
+PlayersHouseB_2F_EventScript_GameCube::
+	msgbox PlayersHouseB_2F_Text_GameCube, MSGBOX_DEFAULT
+	release
+	end
+
+PlayersHouseB_2F_Text_GameCube:
+	.string "Penny always beats you at Smash.\p"
+	.string "She can't touch you at Mario Kart,\n"
+	.string "though.$"
+
+
+
+PlayersHouseB_2F_EventScript_PennyComp::
+	msgbox PlayersHouseB_2F_Text_PennyComp, MSGBOX_DEFAULT
+	release
+	end
+
+PlayersHouseB_2F_Text_PennyComp:
+	.string "It's Penny's computer. She's left\n"
+	.string "Subnautica open.$"
+
+
+PlayersHouseB_2F_EventScript_PennyJournal::
+	msgbox PlayersHouseB_2F_Text_PennyJournal, MSGBOX_DEFAULT
+	release
+	end
+
+PlayersHouseB_2F_Text_PennyJournal:
+	.string "It's Penny's journal. No peeking!$"
+
+
+PlayersHouseB_2F_EventScript_YourJournal::
+	msgbox PlayersHouseB_2F_Text_YourJournal, MSGBOX_DEFAULT
+	release
+	end
+
+PlayersHouseB_2F_Text_YourJournal:
+	.string "It's your journal. To-do list for today:\p"
+	.string "Finish planting the berries\n"
+	.string "Get Penny's keys\l"
+	.string "Watch President Maxie's announcement\p"
+	.string "You've done the berries already. Next\n"
+	.string "is to go down to Sean's house and\l"
+	.string "get Penny's keys.$"
+
+
+PlayersHouseB_2F_EventScript_YourComp::
+	msgbox PlayersHouseB_2F_Text_YourComp, MSGBOX_DEFAULT
+	release
+	end
+
+PlayersHouseB_2F_Text_YourComp:
+	.string "It's your computer. You don't have\n"
+	.string "time to do anything on it now.$"
+
+PlayersHouseB_2F_EventScript_TV::
+	msgbox PlayersHouseB_2F_Text_TV, MSGBOX_DEFAULT
+	release
+	end
+
+PlayersHouseB_2F_Text_TV:
+	.string "No need to turn this on right now.$"
+
+
+
+
 LittlerootTown_BrendansHouse_2F_EventScript_CheckShouldUpdateBrendanPos::
 	goto_if_set FLAG_MET_RIVAL_LILYCOVE, LittlerootTown_BrendansHouse_2F_EventScript_TryUpdateBrendanPos
 	goto_if_ge VAR_BIRCH_LAB_STATE, 2, LittlerootTown_BrendansHouse_2F_EventScript_Ret
