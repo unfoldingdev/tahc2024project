@@ -40,8 +40,8 @@ static const u8 sMegaDrainDescription[] = _(
     "half the damage inflicted.");
 
 static const u8 sHyperBeamDescription[] = _(
-    "Powerful, but leaves the\n"
-    "user immobile the next turn.");
+    "Shoot out a beam? Probably\n"
+    "not the structural kind.");
 
 static const u8 sRevengeDescription[] = _(
     "An attack that gains power\n"
@@ -1619,13 +1619,13 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_HYPER_BEAM] =
     {
-        .name = COMPOUND_STRING("Hyper Beam"),
+        .name = COMPOUND_STRING("Beam"),
         .description = sHyperBeamDescription,
         .effect = EFFECT_HIT,
         .power = 150,
-        .type = TYPE_NORMAL,
-        .accuracy = 90,
-        .pp = 5,
+        .type = TYPE_DRAGON,
+        .accuracy = 100,
+        .pp = 20,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,

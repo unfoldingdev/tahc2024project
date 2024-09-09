@@ -128,7 +128,7 @@ MossdeepCity_House2_Text_SeanCutscene32:
 	.string "That's right.\p"
 	.string "Water is now illegal in all its forms.\p"
 	.string "No more pesky rain ending your outdoor\n"
-	.string "games and adventures.\n"
+	.string "games and adventures.\p"
 	.string "No more ocean to cross when visiting\n"
 	.string "friends or tourist attractions.\p"
 	.string "No more watching your beloved Camerupt\n"

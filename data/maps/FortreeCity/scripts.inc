@@ -75,7 +75,7 @@ FortreeCity_EventScript_BillSign::
 	end
 
 FortreeCity_Text_BillSign:
-	.string "Bill's House$"
+	.string "BILL's House$"
 
 
 FortreeCity_EventScript_Fisherman::
@@ -265,5 +265,5 @@ FortreeCity_Text_CitySign:
 FortreeCity_Text_GymSign:
 	.string "MERIS VILLAGE POKéMON GYM\n"
 	.string "LEADER: KANADA\p"
-	.string "“The Noble Interior Decorator!$"
+	.string "“The Noble Interior Decorator“!$"
 

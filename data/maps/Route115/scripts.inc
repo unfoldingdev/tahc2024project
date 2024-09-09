@@ -96,7 +96,7 @@ Route115_Text_PushyJerkIntro:
 Route115_Text_PushyJerkDefeat:
 	.string "You just knocked it out.\n"
 	.string "Heartless.\p"
-	.string "But I'll still pay you - and it would.\n"
+	.string "But I'll still pay you - and it would\n"
 	.string "be awful of you to reject me now.$"
 
 Route115_Text_PushyJerkPostBattle:

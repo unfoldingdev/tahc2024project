@@ -6,7 +6,7 @@
 .set LOCALID_BOY, 6
 .set LOCALID_WOMAN, 7
 .set LOCALID_EXPERT_F, 8
-.set LOCALID_PENNY, 10
+.set LOCALID_PENNY, 2
 
 LilycoveCity_PokemonTrainerFanClub_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, LilycoveCity_PokemonTrainerFanClub_OnFrame
@@ -50,8 +50,8 @@ LilycoveCity_PokemonTrainerFanClub_EventScript_GiveStarter::
 	//givemon SPECIES_CARRACOSTA, 30
 	//givemon SPECIES_FROGADIER, 30
 	//givemon SPECIES_GOLDEEN, 30
-	givemon SPECIES_CLAMPERL, 30
-	givemon SPECIES_CHINCHOU, 30
+	//givemon SPECIES_CLAMPERL, 30
+	//givemon SPECIES_CHINCHOU, 30
 	additem ITEM_SUPER_POTION, 2
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_SYS_B_DASH

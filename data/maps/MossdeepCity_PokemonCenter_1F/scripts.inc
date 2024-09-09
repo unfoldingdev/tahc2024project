@@ -46,3 +46,5 @@ MossdeepCity_PokemonCenter_1F_Text_Girl2:
 	.string "three contests...\p"
 	.string "That would be like telling everyone\n"
 	.string "that they have no life!$"
+
+
