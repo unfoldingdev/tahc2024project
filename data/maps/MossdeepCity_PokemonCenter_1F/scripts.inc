@@ -22,17 +22,27 @@ MossdeepCity_PokemonCenter_1F_EventScript_Woman::
 	end
 
 MossdeepCity_PokemonCenter_1F_EventScript_Girl::
-	msgbox MossdeepCity_PokemonCenter_1F_Text_AbilitiesMightChangeMoves, MSGBOX_NPC
+	msgbox MossdeepCity_PokemonCenter_1F_Text_AbilitiesMightChangeMoves, MSGBOX_SIGN
+	end
+
+MossdeepCity_PokemonCenter_1F_EventScript_Girl2::
+	msgbox MossdeepCity_PokemonCenter_1F_Text_Girl2, MSGBOX_SIGN
 	end
 
 MossdeepCity_PokemonCenter_1F_Text_GymLeaderDuoFormidable:
-	.string "The GYM LEADERS in this town are\n"
-	.string "a formidable duo.\p"
-	.string "Their combination attacks are, like,\n"
-	.string "excellent and wow!$"
+	.string "Yaaaawwwwn... I just got here from\n"
+	.string "the other side of the world.\p"
+	.string "To me, it feels like 3:28 AM on the\n"
+	.string "night before the deadline right now.$"
 
 MossdeepCity_PokemonCenter_1F_Text_AbilitiesMightChangeMoves:
-	.string "Depending on the special abilities of\n"
-	.string "POKéMON, some moves might change\l"
-	.string "or not work at all.$"
+	.string "So, three contests at the same time,\n"
+	.string "huh?\p"
+	.string "It means a ton of games for people\n"
+	.string "play, so it's fine!$"
 
+MossdeepCity_PokemonCenter_1F_Text_Girl2:
+	.string "Yeah, no one would try to juggle all\n"
+	.string "three contests...\p"
+	.string "That would be like telling everyone\n"
+	.string "that they have no life!$"

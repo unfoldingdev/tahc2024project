@@ -24,9 +24,16 @@ MossdeepCity_House2_Cutscene::
 	msgbox MossdeepCity_House2_Text_SeanCutscene2, MSGBOX_AUTOCLOSE
 	applymovement LOCALID_SEAN, MossdeepCity_House2_Move_FaceUp
 	applymovement OBJ_EVENT_ID_PLAYER, MossdeepCity_House2_Move_WalkToTV
+	fadeoutbgm 0
 	waitmovement 0
+	playbgm MUS_VS_AQUA_MAGMA_LEADER, FALSE
+	delay 24
 	msgbox MossdeepCity_House2_Text_SeanCutscene3, MSGBOX_AUTOCLOSE
-	setflag FLAG_HIDE_FORTREE_CITY_HOUSE_4_WINGULL	
+	msgbox MossdeepCity_House2_Text_SeanCutscene32, MSGBOX_AUTOCLOSE
+	setflag FLAG_HIDE_FORTREE_CITY_HOUSE_4_WINGULL
+	fadeoutbgm 0
+	delay 24
+	playbgm MUS_B_FACTORY, FALSE
 	applymovement LOCALID_SEAN, MossdeepCity_House2_Move_FaceRight
 	applymovement OBJ_EVENT_ID_PLAYER, MossdeepCity_House2_Move_FaceLeft
 	waitmovement 0
@@ -40,9 +47,15 @@ MossdeepCity_House2_Cutscene::
 	waitmovement 0
 	delay 20
 	callnative SetPlayerNameToChel
-	msgbox MossdeepCity_House2_Text_SeanCutscene4, MSGBOX_DEFAULT
-	releaseall
+	msgbox MossdeepCity_House2_Text_SeanCutscene4, MSGBOX_AUTOCLOSE
+	setrespawn HEAL_LOCATION_FORTREE_CITY
+	callnative GetFirstMonLevel
+	givemon SPECIES_CROCONAW, VAR_RESULT
+	setvar VAR_RESULT, 0
+	callnative DeletePartyMon
 	setvar VAR_TEMP_1, 0
+	goto_if_set FLAG_HIDE_FORTREE_CITY_HOUSE_4_WINGULL, MossdeepCity_House2_EventScript_Sean
+	releaseall
 	end
 
 
@@ -73,7 +86,56 @@ MossdeepCity_House2_Move_WalkToTV:
 	step_end
 
 MossdeepCity_House2_Text_SeanCutscene3:
-	.string "MAXIE: My fellow citizens.$"
+	.string "MAXIE: My fellow citizens.\p"
+	.string "We live in a region with too much water.\p"
+	.string "This is a fact. Indisputable.\p"
+	.string "This water divides us. Keeps us apart.\p"
+	.string "Our great cities are separated... by\n"
+	.string "this water.\p"
+	.string "By yet another wild Tentacool every few\n"
+	.string "tiles.\p"
+	.string "By the long queue to fight Norman, to\n"
+	.string "even earn the right to Surf.\p"
+	.string "By pointless detours, currents, rapids\n"
+	.string "that only waste our time.\p"
+	.string "MAXIE:...\p"
+	.string "We live in a region with too much water.\p"
+	.string "It has upset the balance that is needed\n"
+	.string "for people and Pokemon to thrive.\p"
+	.string "Water-type Pokemon are everywhere,\n"
+	.string "like a pestilence for all trainers.\p"
+	.string "And they do not fight fairly.\p"
+	.string "Steven Stone, the rightful champion of\n"
+	.string "Hoenn, was defeated by a mere artist.\p"
+	.string "How?\p"
+	.string "Because the artist used only Water\n"
+	.string "Pokemon.$"
+
+MossdeepCity_House2_Text_SeanCutscene32:
+	.string "Instead of putting Surf, Waterfall,\n"
+	.string "and Dive on one low-level Pokemon,\l"
+	.string "as a necessary evil...\p"
+	.string "this so-called champion chose to stack\n"
+	.string "his team as unfairly as possible.\p"
+	.string "MAXIE:...\p"
+	.string "Yes, we live in a region with too much\n"
+	.string "water.\p"
+	.string "And it is high time we did something\n"
+	.string "about it.\p"
+	.string "And that is why, effective immediately,\n"
+	.string "WATER IS NOW OUTLAWED.\p"
+	.string "MAXIE:...\p"
+	.string "That's right.\p"
+	.string "Water is now illegal in all its forms.\p"
+	.string "No more pesky rain ending your outdoor\n"
+	.string "games and adventures.\n"
+	.string "No more ocean to cross when visiting\n"
+	.string "friends or tourist attractions.\p"
+	.string "No more watching your beloved Camerupt\n"
+	.string "die to a Bubblebeam, again.\p"
+	.string "MAXIE:...\p"
+	.string "My fellow citizens...\p"
+	.string "We are no longer a 7.8/10 region!$"
 
 MossdeepCity_House2_Move_FaceLeft:
 	face_left
@@ -84,10 +146,12 @@ MossdeepCity_House2_Move_FaceRight:
 	step_end
 
 MossdeepCity_House2_Text_SeanCutscene4:
-	.string "   N: What just happened?\n"
-	.string "Did Maxie really outlaw      ?\p"
-	.string "What? I can't even say it?\p"
-	.string "Chel    , what are... \p"
+	.string "      N: What just happened?\n"
+	.string "Did Maxie really outlaw          ?\p"
+	.string "Wait, what?\p"
+	.string "I can't even say it?\p"
+	.string "Chel     , what are... \p"
+	.string "???\p"
 	.string "Wait, what happened to your...\p"
 	.string "What happened to MY name?!?$"
 
@@ -98,13 +162,14 @@ MossdeepCity_House2_Text_SeanCutscene4:
 
 MossdeepCity_House2_EventScript_Sean::
 	goto_if_set FLAG_WINGULL_DELIVERED_MAIL, MossdeepCity_House2_EventScript_Sean2
-	msgbox MossdeepCity_House2_Text_Sean1, MSGBOX_NPC
+	msgbox MossdeepCity_House2_Text_Sean1, MSGBOX_AUTOCLOSE
 	givemon SPECIES_KLEFKI, 25
 	playfanfare MUS_OBTAIN_ITEM
 	message MossdeepCity_House2_Text_KlefkiGet
 	waitmessage
 	waitfanfare
 	setflag FLAG_WINGULL_DELIVERED_MAIL
+	release
 	end
 
 MossdeepCity_House2_Text_Sean1:
@@ -130,9 +195,15 @@ MossdeepCity_House2_End::
 	end
 
 
+MossdeepCity_House2_EventScript_TV::
+	msgbox MossdeepCity_House2_Text_TV, MSGBOX_NPC
+	release
+	end
 
 
-
+MossdeepCity_House2_Text_TV:
+	.string "Maxie's shaking a lot of hands.\p"
+	.string "He looks a little too happy.$"
 
 
 

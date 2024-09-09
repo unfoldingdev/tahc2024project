@@ -31,24 +31,54 @@ MossdeepCity_Text_Fisherman:
 
 
 MossdeepCity_EventScript_FreshWater::
-	msgbox MossdeepCity_Text_FreshWater, MSGBOX_DEFAULT
+	msgbox MossdeepCity_Text_FreshWater, MSGBOX_NPC
 	release
 	end
 
 MossdeepCity_Text_FreshWater:
 	.string "Did you know that Fresh Water has the\n"
 	.string "best healing to cost ratio?\p"
-	.string "Potions - 15 per HP. Awful.\p"
-	.string "Super Potions - 14 per HP. Bad.\p"
-	.string "Hyper Potions - 7.5 per HP. Better.\p"
+	.string "Potions - 15¥ per HP. Awful.\p"
+	.string "Super Potions - 14¥ per HP. Bad.\p"
+	.string "Hyper Potions - 7.5¥ per HP. Better.\p"
 	.string "Max Potions - about the same.\p"
 	.string "Well, unless you have a Max HP Blissey,\n"
-	.string "then it's like 3.5. And only if you heal\l"
+	.string "then it's like 3.5¥. And only if you heal\l"
 	.string "up from 1 HP.\p"
 	.string "And then... drumroll please...\p"
-	.string "Fresh Waters - 4 per HP. Ooh yeah.\p"
+	.string "Fresh Waters - 4¥ per HP. Ooh yeah.\p"
 	.string "I just stocked up!$"
 
+
+MossdeepCity_EventScript_HideAndSeek::
+	msgbox MossdeepCity_Text_HideAndSeek, MSGBOX_NPC
+	release
+	end
+
+MossdeepCity_Text_HideAndSeek:
+	.string "It's hard to play Hide and Seek\n"
+	.string "by yourself.$"
+
+
+MossdeepCity_EventScript_HouseLevels::
+	msgbox MossdeepCity_Text_HouseLevels, MSGBOX_NPC
+	release
+	end
+
+MossdeepCity_Text_HouseLevels:
+	.string "Isn't it neat how every house on\n"
+	.string "the island is on a different level?\p"
+	.string "Well, they were...\p"
+	.string "Until someone decided to build a Gym.$"
+
+
+MossdeepCity_EventScript_MySon::
+	msgbox MossdeepCity_Text_MySon, MSGBOX_NPC
+	release
+	end
+
+MossdeepCity_Text_MySon:
+	.string "Where is that boy?$"
 
 
 
@@ -84,6 +114,64 @@ MossdeepCity_Text_WalterF:
 	.string "Blocking the door won't change that!$"
 
 
+MossdeepCity_EventScript_GymSign1::
+	msgbox MossdeepCity_Text_GymSign1, MSGBOX_DEFAULT
+	release
+	end
+
+MossdeepCity_Text_GymSign1:
+	.string "MERIS VILLAGE POKéMON GYM\n"
+	.string "LEADER: KANADA\p"
+	.string "“The Noble Interior Decorator!“$"
+
+MossdeepCity_EventScript_CitySign1::
+	msgbox MossdeepCity_Text_CitySign1, MSGBOX_DEFAULT
+	release
+	end
+
+MossdeepCity_Text_CitySign1:
+	.string "THE WETRIXES$"
+
+MossdeepCity_EventScript_SeanSign::
+	msgbox MossdeepCity_Text_SeanSign, MSGBOX_DEFAULT
+	release
+	end
+
+MossdeepCity_Text_SeanSign:
+	.string "SEAN's House$"
+
+MossdeepCity_EventScript_BillSign::
+	msgbox MossdeepCity_Text_BillSign, MSGBOX_DEFAULT
+	release
+	end
+
+MossdeepCity_Text_BillSign:
+	.string "BILL's House$"
+
+
+
+MossdeepCity_EventScript_AreYouSureSean::
+	msgbox MossdeepCity_Text_AreYouSureSean, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MossdeepCity_EventScript_End
+	goto_if_eq VAR_RESULT, YES, FortreeCity_EventScript_WarpToMaxie
+	release
+	end
+
+MossdeepCity_Text_AreYouSureSean:
+	.string "It's Sean's house; this is where you\n"
+	.string "need to pick up Penny's keys.\p"
+	.string "Are you done exploring?$"
+
+
+
+FortreeCity_EventScript_WarpToMaxie::
+	warp MAP_MOSSDEEP_CITY_HOUSE2, 4, 8
+	end
+
+
+MossdeepCity_EventScript_End::
+	releaseall
+	end
 
 
 MossdeepCity_EventScript_PokefanF::
@@ -472,8 +560,8 @@ MossdeepCity_Text_GymSign:
 	.string "“The mystic combination!”$"
 
 MossdeepCity_Text_CitySign:
-	.string "MOSSDEEP CITY\n"
-	.string "“Our slogan: Cherish POKéMON!”$"
+	.string "Meris Village\p"
+	.string "'The Jewel of the Sea!'$"
 
 MossdeepCity_Text_SpaceCenterSign:
 	.string "MOSSDEEP SPACE CENTER\n"

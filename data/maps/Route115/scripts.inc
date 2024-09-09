@@ -39,6 +39,33 @@ Route115_Text_SoloRock:
 	.string "you can plant berries here, too.$"
 
 
+Route115_EventScript_Phantom::
+	playmoncry SPECIES_POOCHYENA, CRY_MODE_NORMAL
+	msgbox Route115_Text_Phantom, MSGBOX_SIGN
+	waitmoncry
+	end
+
+Route115_Text_Phantom:
+	.string "PHANTOM: Grrrrr...\p"
+	.string "Phantom doesn't like that guy either.\p"
+	.string "She's probably a good deterrent, even\n"
+	.string "though she's way too cowardly to get\l"
+	.string "any closer.$"
+
+Route115_EventScript_Kitsch::
+	playmoncry SPECIES_SKITTY, CRY_MODE_NORMAL
+	msgbox Route115_Text_Kitsch, MSGBOX_SIGN
+	waitmoncry
+	end
+
+Route115_Text_Kitsch:
+	.string "Kitschy is taking a catnap on the small\n"
+	.string "mountain area you haven't cleared yet.\p"
+	.string "He opens an eye lazily, looking quite\n"
+	.string "pleased with himself.$"
+
+
+
 Route115_EventScript_HomesteadSign::
 	msgbox Route115_Text_HomesteadSign, MSGBOX_SIGN
 	end
@@ -58,14 +85,19 @@ Route115_EventScript_PushyJerk::
 
 Route115_Text_PushyJerkIntro:
 	.string "Hey look, I know you said you weren't\n"
-	.string "interested and that I needed to stop.\p"
-	.string "But I caught and trained a special\n"
+	.string "interested, that I needed to stay off\l"
+	.string "your island.\p"
+	.string "So I'll be here - I'm not on the island,\n"
+	.string "technically. I'm in the water.\p"
+	.string "And I caught and trained a special\n"
 	.string "Pokemon that not even you can reject!\p"
 	.string "It's the power of my love for you!$"
 
 Route115_Text_PushyJerkDefeat:
 	.string "You just knocked it out.\n"
-	.string "Heartless.$"
+	.string "Heartless.\p"
+	.string "But I'll still pay you - and it would.\n"
+	.string "be awful of you to reject me now.$"
 
 Route115_Text_PushyJerkPostBattle:
 	.string "Yeah yeah, I'll leave.\p"

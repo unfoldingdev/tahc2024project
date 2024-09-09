@@ -103,11 +103,11 @@ const u32 gTrainerPalette_PokemonBreederM[] = INCBIN_U32("graphics/trainers/fron
 const u32 gTrainerFrontPic_PsychicM[] = INCBIN_U32("graphics/trainers/front_pics/psychic_m.4bpp.lz");
 const u32 gTrainerPalette_PsychicM[] = INCBIN_U32("graphics/trainers/front_pics/psychic_m.gbapal.lz");
 
-const u32 gTrainerFrontPic_PsychicF[] = INCBIN_U32("graphics/trainers/front_pics/psychic_f.4bpp.lz");
-const u32 gTrainerPalette_PsychicF[] = INCBIN_U32("graphics/trainers/front_pics/psychic_f.gbapal.lz");
+const u32 gTrainerFrontPic_PsychicF[] = INCBIN_U32("graphics/trainers/front_pics/elite_four_sidney.4bpp.lz");
+const u32 gTrainerPalette_PsychicF[] = INCBIN_U32("graphics/trainers/front_pics/elite_four_sidney.gbapal.lz");
 
-const u32 gTrainerFrontPic_Gentleman[] = INCBIN_U32("graphics/trainers/front_pics/gentleman.4bpp.lz");
-const u32 gTrainerPalette_Gentleman[] = INCBIN_U32("graphics/trainers/front_pics/gentleman.gbapal.lz");
+const u32 gTrainerFrontPic_Gentleman[] = INCBIN_U32("graphics/trainers/front_pics/elite_four_sidney.4bpp.lz");
+const u32 gTrainerPalette_Gentleman[] = INCBIN_U32("graphics/trainers/front_pics/elite_four_sidney.gbapal.lz");
 
 const u32 gTrainerFrontPic_EliteFourSidney[] = INCBIN_U32("graphics/trainers/front_pics/elite_four_sidney.4bpp.lz");
 const u32 gTrainerPalette_EliteFourSidney[] = INCBIN_U32("graphics/trainers/front_pics/elite_four_sidney.gbapal.lz");
@@ -259,8 +259,8 @@ const u32 gTrainerPalette_PalaceMavenSpenser[] = INCBIN_U32("graphics/trainers/f
 const u32 gTrainerFrontPic_ArenaTycoonGreta[] = INCBIN_U32("graphics/trainers/front_pics/arena_tycoon_greta.4bpp.lz");
 const u32 gTrainerPalette_ArenaTycoonGreta[] = INCBIN_U32("graphics/trainers/front_pics/arena_tycoon_greta.gbapal.lz");
 
-const u32 gTrainerFrontPic_FactoryHeadNoland[] = INCBIN_U32("graphics/trainers/front_pics/factory_head_noland.4bpp.lz");
-const u32 gTrainerPalette_FactoryHeadNoland[] = INCBIN_U32("graphics/trainers/front_pics/factory_head_noland.gbapal.lz");
+const u32 gTrainerFrontPic_FactoryHeadNoland[] = INCBIN_U32("graphics/trainers/front_pics/elite_four_sidney.4bpp.lz");
+const u32 gTrainerPalette_FactoryHeadNoland[] = INCBIN_U32("graphics/trainers/front_pics/elite_four_sidney.gbapal.lz");
 
 const u32 gTrainerFrontPic_PikeQueenLucy[] = INCBIN_U32("graphics/trainers/front_pics/pike_queen_lucy.4bpp.lz");
 const u32 gTrainerPalette_PikeQueenLucy[] = INCBIN_U32("graphics/trainers/front_pics/pike_queen_lucy.gbapal.lz");
@@ -343,7 +343,7 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(POKEMON_BREEDER_M, PokemonBreederM),
     TRAINER_SPRITE(PSYCHIC_M, PsychicM),
     TRAINER_SPRITE(PSYCHIC_F, PsychicF),
-    TRAINER_SPRITE(GENTLEMAN, Gentleman),
+    TRAINER_SPRITE(GENTLEMAN, EliteFourSidney),
     TRAINER_SPRITE(ELITE_FOUR_SIDNEY, EliteFourSidney),
     TRAINER_SPRITE(ELITE_FOUR_PHOEBE, EliteFourPhoebe),
     TRAINER_SPRITE(ELITE_FOUR_GLACIA, EliteFourGlacia, -4, 4, 0x1B0),
@@ -394,7 +394,7 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(DOME_ACE_TUCKER, DomeAceTucker),
     TRAINER_SPRITE(PALACE_MAVEN_SPENSER, PalaceMavenSpenser),
     TRAINER_SPRITE(ARENA_TYCOON_GRETA, ArenaTycoonGreta),
-    TRAINER_SPRITE(FACTORY_HEAD_NOLAND, FactoryHeadNoland),
+    TRAINER_SPRITE(FACTORY_HEAD_NOLAND, EliteFourSidney),
     TRAINER_SPRITE(PIKE_QUEEN_LUCY, PikeQueenLucy),
     TRAINER_SPRITE(PYRAMID_KING_BRANDON, PyramidKingBrandon),
     TRAINER_SPRITE(RED, Red),

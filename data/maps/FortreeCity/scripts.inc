@@ -11,9 +11,28 @@ FortreeCity_OnResume:
 	setstepcallback STEP_CB_FORTREE_BRIDGE
 	end
 
+FortreeCity_EventScript_HowDidYou::
+	msgbox FortreeCity_Text_HowDidYou, MSGBOX_SIGN
+	release
+	end
+
+FortreeCity_Text_HowDidYou:
+	.string "How did you get down there?$"
+
+
+FortreeCity_EventScript_MoreHouses::
+	msgbox FortreeCity_Text_MoreHouses, MSGBOX_SIGN
+	release
+	end
+
+FortreeCity_Text_MoreHouses:
+	.string "Now we have to build more houses...$"
+
+
 
 FortreeCity_EventScript_FreshWater::
-	msgbox FortreeCity_Text_WalterL, MSGBOX_NPC
+	lockall
+	msgbox FortreeCity_Text_FreshWater, MSGBOX_NPC
 	giveitem ITEM_ADAMANT_MINT
 	release
 	end
@@ -21,7 +40,7 @@ FortreeCity_EventScript_FreshWater::
 FortreeCity_Text_FreshWater:
 	.string "It's all gone. My beautiful stash\n"
 	.string "of Fresh...\p"
-	.string "Now they've turned into candy.\p"
+	.string "Now they've turned into what, candy?\p"
 	.string "A whole pocketful.\p"
 	.string "How many could I possibly use?\p"
 	.string "Here, take one.$"
@@ -41,7 +60,7 @@ FortreeCity_EventScript_NSign::
 	end
 
 FortreeCity_Text_NSign:
-	.string "      n's House$"
+	.string "        n's House$"
 
 FortreeCity_EventScript_CitySign1::
 	msgbox FortreeCity_Text_CitySign1, MSGBOX_SIGN
@@ -49,8 +68,7 @@ FortreeCity_EventScript_CitySign1::
 
 FortreeCity_Text_CitySign1:
 	.string "Meris Village\p"
-	.string "The only rock around here that can\n"
-	.string "hold multiple low-maintenance people.$"
+	.string "'The Jewel of the    !'$"
 
 FortreeCity_EventScript_BillSign::
 	msgbox FortreeCity_Text_BillSign, MSGBOX_SIGN
@@ -242,13 +260,10 @@ FortreeCity_Text_UsedDevonScopePokemonFled:
 	.string "The startled POKéMON fled!$"
 
 FortreeCity_Text_CitySign:
-	.string "FORTREE CITY\n"
-	.string "“The treetop city that frolics with\l"
-	.string "nature.”$"
+	.string "THE WETRIXES$"
 
 FortreeCity_Text_GymSign:
-	.string "FORTREE CITY POKéMON GYM\n"
-	.string "LEADER: WINONA\p"
-	.string "“The bird user taking flight into\n"
-	.string "the world.”$"
+	.string "MERIS VILLAGE POKéMON GYM\n"
+	.string "LEADER: KANADA\p"
+	.string "“The Noble Interior Decorator!$"
 

@@ -32,24 +32,20 @@ Route111_Text_GymTrainer1:
 
 
 Route111_WinstrateFamilysHouse_EventScript_Champ1::
-	lock
-	faceplayer
-	msgbox Route111_Text_Champ1, MSGBOX_DEFAULT
+	msgbox Route111_Text_Champ1, MSGBOX_NPC
 	release
 	end
 
 Route111_Text_Champ1:
 	.string "-sigh- Hi. Welcome to the Meris Gym.\p"
-	.string "Meris's Gym Leader Kanada went to a few\n"
-	.string "Feng Shui seminars and decided that it\l"
-	.string "was close enough to Water for it to be\l"
-	.string "her Gym puzzle.\p"
-	.string "So I don't get to be in a cool indoor\n"
-	.string "pool or a icy labyrinth.\p"
-	.string "I'm in a badly-designed-on-purpose\n"
-	.string "house, with some easy puzzles.\p"
-	.string "Anyway, don't bring Fire and Ground\n"
-	.string "Pokemon or whatever.$"
+	.string "Apparently Maxie's new rule works on\n"
+	.string "Chinese, so now it's a Feng      Gym.\p"
+	.string "And then someone discovered that Feng\n"
+	.string "means 'wind', so now they're discussing\l"
+	.string "a possible change to a Flying Gym.\p"
+	.string "Is it really worth the paperwork to\n"
+	.string "change things, yadda yadda.\p"
+	.string "Guess who's out here on guard duty?$"
 
 
 Route111_WinstrateFamilysHouse_EventScript_Plant::
@@ -57,7 +53,16 @@ Route111_WinstrateFamilysHouse_EventScript_Plant::
 	end
 
 Route111_Text_Plant:
-	.string "It's too heavy to move.\p"
+	.string "This potted plant is obviously out\n"
+	.string "of place, but you don't have STRENGTH.$"
+
+
+Route111_WinstrateFamilysHouse_EventScript_PropTV::
+	msgbox Route111_Text_PropTV, MSGBOX_SIGN
+	end
+
+Route111_Text_PropTV:
+	.string "This isn't a real TV - it's just a prop.$"
 
 
 	goto_if_set FLAG_RECEIVED_MACHO_BRACE, Route111_WinstrateFamilysHouse_EventScript_ReceivedMachoBrace

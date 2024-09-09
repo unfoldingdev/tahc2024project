@@ -36,13 +36,14 @@ Route116_EventScript_Nick::
 
 Route116_Text_Nick:
 	.string "NICK: Hi Chelsea!\p"
-	.string "Nikki's been begging me for a Pokemon,\n"
-	.string "so I finally special-ordered a Psyduck.\p"
+	.string "Ever since Nicky got that useless fish,\n"
+	.string "Nikki's been begging me for a Pokemon.\p"
+	.string "So, I finally special-ordered a Psyduck.\p"
 	.string "It's from that breeder that specializes\n"
-	.string "in useless Pokemon to discourage kids.\p"
-	.string "No daughter of mine is going to quit\n"
+	.string "in awful Pokemon to discourage kids.\p"
+	.string "No child of mine is going to quit\n"
 	.string "school to chase a foolish dream!\p"
-	.string "It's ability is Damp, and it can only...\p"
+	.string "Its ability is Damp, and it can only...\p"
 	.string "Well, why don't you battle her and see?$"
 
 
@@ -63,6 +64,31 @@ Route116_Text_NikkiPostBattle:
 	.string "NIKKI: Daddy says that ducky has\n"
 	.string "desplucktive tendencies and shouldn't\l"
 	.string "battle much. But that was fun!$"
+
+
+
+Route116_EventScript_Nicky::
+	trainerbattle_single TRAINER_KAREN_1, Route116_Text_NickyIntro, Route116_Text_NickyDefeat
+	msgbox Route116_Text_NickyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+
+Route116_Text_NickyIntro:
+	.string "NICKY: Daddy look, it's Miss Chess-lee!\p"
+	.string "Can we battle? Please?$"
+
+Route116_Text_NickyDefeat:
+	.string "Whoa! The big gator!$"
+
+Route116_Text_NickyPostBattle:
+	.string "NICKY: I don't want fishy to grow\n"
+	.string "up. It will be too big for me!$"
+
+
+
+
+
+
 
 
 Route116_EventScript_MagmaGrunt::
@@ -186,7 +212,7 @@ Route116_Text_ShyElectricPostBattle:
 
 
 Route116_EventScript_WaterStoneGuy::
-	msgbox Route116_Text_WaterStoneGuy, MSGBOX_DEFAULT
+	msgbox Route116_Text_WaterStoneGuy, MSGBOX_NPC
 	release
 	end
 

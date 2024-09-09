@@ -2,15 +2,15 @@
   "id": "MAP_ROUTE119",
   "name": "Route119",
   "layout": "LAYOUT_ROUTE119",
-  "music": "MUS_ROUTE119",
+  "music": "MUS_B_FACTORY",
   "region_map_section": "MAPSEC_ROUTE_119",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
-  "map_type": "MAP_TYPE_ROUTE",
+  "map_type": "MAP_TYPE_INDOOR",
   "allow_cycling": true,
   "allow_escaping": false,
   "allow_running": true,
-  "show_map_name": true,
+  "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -99,21 +99,21 @@
       "movement_range_x": 4,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "2",
+      "trainer_sight_or_berry_tree_id": "0",
       "script": "Route119_EventScript_NoStones",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
-      "x": 4,
+      "graphics_id": "OBJ_EVENT_GFX_SPENSER",
+      "x": 21,
       "y": 13,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_COPY_PLAYER_COUNTERCLOCKWISE_IN_GRASS",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "Route119_EventScript_Kent",
+      "script": "Route119_EventScript_Mystic",
       "flag": "0"
     },
     {
@@ -138,7 +138,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "3",
+      "trainer_sight_or_berry_tree_id": "0",
       "script": "Route119_EventScript_MyLegsAreFine",
       "flag": "0"
     },
@@ -158,13 +158,13 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
       "x": 16,
-      "y": 8,
+      "y": 11,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "5",
+      "trainer_sight_or_berry_tree_id": "2",
       "script": "Route119_EventScript_MagmaGrunt",
       "flag": "0"
     },
@@ -249,7 +249,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_DRAKE",
       "x": 27,
-      "y": 48,
+      "y": 49,
       "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -373,20 +373,20 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route119_EventScript_Boy2",
+      "script": "Route119_EventScript_Ship",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
-      "x": 4,
-      "y": 9,
+      "graphics_id": "OBJ_EVENT_GFX_TUBER_M",
+      "x": 33,
+      "y": 10,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_TREE_DISGUISE",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route119_EventScript_Hideo",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "Route119_EventScript_Nicky",
       "flag": "0"
     },
     {
@@ -459,7 +459,7 @@
       "x": 34,
       "y": 10,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_RUN_IN_PLACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -494,7 +494,7 @@
       "flag": "FLAG_ITEM_ROUTE_119_ELIXIR_2"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPENSER",
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
       "x": 15,
       "y": 26,
       "elevation": 3,
@@ -584,35 +584,11 @@
     },
     {
       "type": "hidden_item",
-      "x": 40,
-      "y": 27,
-      "elevation": 3,
-      "item": "ITEM_DEEPSEATOOTH",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_119_CALCIUM"
-    },
-    {
-      "type": "hidden_item",
-      "x": 22,
+      "x": 16,
       "y": 28,
       "elevation": 3,
       "item": "ITEM_BIG_PEARL",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_119_ULTRA_BALL"
-    },
-    {
-      "type": "hidden_item",
-      "x": 46,
-      "y": 36,
-      "elevation": 3,
-      "item": "ITEM_BIG_PEARL",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_119_FULL_HEAL"
-    },
-    {
-      "type": "hidden_item",
-      "x": 54,
-      "y": 34,
-      "elevation": 3,
-      "item": "ITEM_MAX_ETHER",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_119_MAX_ETHER"
     },
     {
       "type": "sign",
@@ -621,6 +597,54 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route119_EventScript_TrainerTipsDecoration"
+    },
+    {
+      "type": "hidden_item",
+      "x": 40,
+      "y": 27,
+      "elevation": 0,
+      "item": "ITEM_DEEP_SEA_TOOTH",
+      "flag": "FLAG_HIDDEN_ITEM_UNDERWATER_126_PEARL"
+    },
+    {
+      "type": "hidden_item",
+      "x": 17,
+      "y": 37,
+      "elevation": 0,
+      "item": "ITEM_DEEP_SEA_SCALE",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_119_CALCIUM"
+    },
+    {
+      "type": "hidden_item",
+      "x": 46,
+      "y": 36,
+      "elevation": 0,
+      "item": "ITEM_PEARL",
+      "flag": "FLAG_HIDDEN_ITEM_UNDERWATER_126_YELLOW_SHARD"
+    },
+    {
+      "type": "hidden_item",
+      "x": 22,
+      "y": 28,
+      "elevation": 0,
+      "item": "ITEM_BIG_PEARL",
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_119_ULTRA_BALL"
+    },
+    {
+      "type": "sign",
+      "x": 26,
+      "y": 48,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Route119_EventScript_Ship"
+    },
+    {
+      "type": "sign",
+      "x": 25,
+      "y": 48,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Route119_EventScript_Ship"
     }
   ]
 }

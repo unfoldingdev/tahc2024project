@@ -72,9 +72,7 @@ PlayersHouseM_2F_Text_HealYou:
 
 PlayersHouseM_2F_EventScript_GoWin::
 	special HealPlayerParty
-	setflag FLAG_HIDE_ROUTE_118_STEVEN
 	msgbox PlayersHouseM_2F_Text_HealedGo, MSGBOX_DEFAULT
-	givemon SPECIES_DITTO, 50
 	release
 	end
 
@@ -84,7 +82,9 @@ PlayersHouseM_2F_Text_HealedGo:
 
 PlayersHouseM_2F_EventScript_NoWin::
 	special HealPlayerParty
+	setflag FLAG_HIDE_ROUTE_118_STEVEN
 	msgbox PlayersHouseM_2F_Text_WhatReally, MSGBOX_DEFAULT
+	givemon SPECIES_DITTO, 50
 	release
 	end
 
@@ -139,6 +139,7 @@ PlayersHouseM_2F_Text_YourJournal:
 	.string "It's your journal. To-do list for today:\p"
 	.string "Finish planting the berries\n"
 	.string "Get Penny's keys\l"
+	.string "Watch President Maxie's announcement\p"
 	.string "You can check em all off.$"
 
 

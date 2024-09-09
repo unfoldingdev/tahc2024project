@@ -9,6 +9,17 @@ LilycoveCity_House4_EventScript_Man2::
 	msgbox LilycoveCity_House4_Text_UnderwaterTrenchMossdeepSootopolis, MSGBOX_NPC
 	end
 
+LilycoveCity_House4_EventScript_TV::
+	msgbox LilycoveCity_House4_Text_TV, MSGBOX_SIGN
+	end
+
+LilycoveCity_House4_Text_TV:
+	.string "Looks like President Maxie's\n"
+	.string "announcement is starting soon.$"
+
+
+
+
 LilycoveCity_House4_Text_MysteriesAtBottomOfSea:
 	.string "Have you ever heard of the parallel\n"
 	.string "universe, Earth?\p"
@@ -25,7 +36,6 @@ LilycoveCity_House4_Text_MysteriesAtBottomOfSea:
 
 
 LilycoveCity_House4_Text_UnderwaterTrenchMossdeepSootopolis:
-	.string "There's a deep underwater trench\n"
-	.string "between MOSSDEEP and SOOTOPOLIS.\p"
-	.string "That's what someone told me, anyway.$"
+	.string "What's our President up to now?\n"
+	.string "Archie's done nothing wrong!$"
 

@@ -4292,3 +4292,20 @@ void PreparePartyForSkyBattle(void)
     VarSet(B_VAR_SKY_BATTLE,participatingPokemonSlot);
     CompactPartySlots();
 }
+
+void DeletePartyMon(void)
+{
+    u8 slot;
+    slot = VarGet(VAR_RESULT);
+    //DebugPrintf("Deletion slot: %d\n", slot);
+
+    ZeroMonData(&gPlayerParty[slot]);
+    CompactPartySlots();
+}
+
+void GetFirstMonLevel(void)
+{
+    gSpecialVar_Result = GetMonData(&gPlayerParty[0], MON_DATA_LEVEL);
+}
+
+

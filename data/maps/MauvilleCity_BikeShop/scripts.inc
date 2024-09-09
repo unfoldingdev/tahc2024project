@@ -22,8 +22,89 @@ MauvilleCity_BikeShop_Text_TV:
 	.string "There's a lot of pundits talking about\n"
 	.string "the big announcement. Blech.$"
 
+MauvilleCity_BikeShop_EventScript_Kitsch::
+	playmoncry SPECIES_SKITTY, CRY_MODE_NORMAL
+	msgbox MauvilleCity_BikeShop_Text_Kitsch, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+MauvilleCity_BikeShop_Text_Kitsch:
+	.string "Kitschy is watching TV with Penny\n"
+	.string "and... he's being openly affectionate.\p"
+	.string "She must have really been worried.$"
 
 
+
+MauvilleCity_BikeShop_EventScript_PennyFinal::
+	lockall
+	msgbox MauvilleCity_BikeShop_Text_Penny1, MSGBOX_NPC
+	fadescreenspeed FADE_TO_BLACK, 10
+	playbgm MUS_OCEANIC_MUSEUM, FALSE
+	delay 24
+	msgbox MauvilleCity_BikeShop_Text_GameClear, MSGBOX_NPC
+	msgbox MauvilleCity_BikeShop_Text_GameClear2, MSGBOX_NPC
+	fadeoutbgm 0
+	delay 72
+	callnative DoSoftReset
+
+MauvilleCity_BikeShop_Text_Penny1:
+	.string "You made it home!\n"
+	.string "I was... I wasn't worried.\p"
+	.string "...\p"
+	.string "So... it changed your name, huh?\p"
+	.string "That's fine. I always liked The\n"
+	.string "Road to El Dorado.\p"
+	.string "And Portal!\p"
+	.string "Wait... OH MY GOD!\p"
+	.string "No more, uh, liquid levels in Mario!\p"
+	.string "Come on, let's go check!$"
+
+MauvilleCity_BikeShop_Text_GameClear:
+	.string "Under The         \p"
+	.string "A silly little game by Unfolding\p"
+	.string "Tools Used:\p"
+	.string "pokeemerald, by pret\p"
+	.string "pokeemerald-expansion, by DizzyEggg,\n"
+	.string "ghoulslash, UltimaSoul, Lunos, mvit,\l"
+	.string "ShantyTown, Syreledar, Cancer Fairy,\l"
+	.string "MrDollSteak, Avara, Kuraususun, TheLaw,\l"
+	.string "Breadcrumbs, MandL27, Pyredid, Doesnt.\p"
+	.string "Porymap, by huderlem\p"
+	.string "Pokémon Emerald Textbox Simulator,\n"
+	.string "by meejle\p"
+	.string "Resources Used:\p"
+	.string "Underwater Reef Tileset, by rahtak\p"
+	.string "Romhacking Tutorials, by Archie$"
+
+MauvilleCity_BikeShop_Text_GameClear2:
+	.string "Special Thanks:\p"
+	.string "GameFreak, for graphics, music, and\n"
+	.string "everything POKéMON.\p"
+	.string "Team Aqua's Hideout, for being such\n"
+	.string "a rich source of knowledge and support.\p"
+	.string "RavePossum, Sylph, wiz1989, Pawkkie,\n"
+	.string "nico, and of course, the one and only\l"
+	.string "Archie, for tirelessly answering all\l"
+	.string "my dumb questions - this hack would\l"
+	.string "not have been possible without them.\p"
+	.string "CedarNyx, for Matthew's Nightmare,\n"
+	.string "still the standard for FE hacking,\l"
+	.string "and symplectic, for Larl Does\l"
+	.string "Everything Twice Twice, one of the\l"
+	.string "foundations of modern Mario Maker.\p"
+	.string "POKéMON Emerald belongs to Nintendo,\n"
+	.string "GameFreak, the POKéMON company,\l"
+	.string "Creatures Inc., etc. Please support\l"
+	.string "their official releases.\p"
+	.string "I claim ownership of nothing, and\n"
+	.string "I do not support the sale or\l"
+	.string "monetization of fangames in any way.\p"
+	.string "Congratulations, and thank you for\n"
+	.string "playing!\p"
+	.string "This was my first decomp hack, so\n"
+	.string "please forgive any rough edges!\p"
+	.string "Any and all feedback is appreciated!$"
 
 
 

@@ -45,38 +45,50 @@ LilycoveCity_PokemonTrainerFanClub_EventScript_End::
 
 LilycoveCity_PokemonTrainerFanClub_EventScript_GiveStarter::
 	givemon SPECIES_FERALIGATR, 30
+	//givemon SPECIES_CROCONAW, 30
+	//givemon SPECIES_STARYU, 30
+	//givemon SPECIES_CARRACOSTA, 30
+	//givemon SPECIES_FROGADIER, 30
+	//givemon SPECIES_GOLDEEN, 30
+	givemon SPECIES_CLAMPERL, 30
+	givemon SPECIES_CHINCHOU, 30
+	additem ITEM_SUPER_POTION, 2
 	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_SYS_B_DASH
+	setflag FLAG_RECEIVED_RUNNING_SHOES
 	setflag FLAG_DEFEATED_PETALBURG_GYM
 	setflag FLAG_RECEIVED_HM_SURF
 	setflag FLAG_BADGE05_GET
 	setflag FLAG_BADGE08_GET
 	setflag FLAG_VISITED_LITTLEROOT_TOWN
+	setrespawn HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F
 	end
 
 LilycoveCity_PokemonTrainerFanClub_OpeningCutscene::
 	lockall
-	applymovement OBJ_EVENT_ID_PLAYER, LilycoveCity_PokemonTrainerFanClub_FaceUp
+	lock
+	applymovement OBJ_EVENT_ID_PLAYER, MossdeepCity_House2_Move_FaceUp
 	waitmovement 0
 	delay 100
-	msgbox LilycoveCity_PokemonTrainerFanClub_Text_Opening1, MSGBOX_NPC
+	msgbox LilycoveCity_PokemonTrainerFanClub_Text_Opening1, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_PLAYER, LilycoveCity_PokemonTrainerFanClub_FaceLeft
+	waitmovement 0
 	applymovement LOCALID_PENNY, LilycoveCity_PokemonTrainerFanClub_PennyDown
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, LilycoveCity_PokemonTrainerFanClub_FaceRight
+	msgbox LilycoveCity_PokemonTrainerFanClub_Text_Opening2, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_PLAYER, MossdeepCity_House2_Move_FaceUp
 	waitmovement 0
-	msgbox LilycoveCity_PokemonTrainerFanClub_Text_Opening2, MSGBOX_NPC
 	applymovement LOCALID_PENNY, LilycoveCity_PokemonTrainerFanClub_PennyUp
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, LilycoveCity_PokemonTrainerFanClub_FaceUp
+	msgbox LilycoveCity_PokemonTrainerFanClub_Text_Opening3, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_PLAYER, MossdeepCity_House2_Move_FaceLeft
 	waitmovement 0
-	msgbox LilycoveCity_PokemonTrainerFanClub_Text_Opening3, MSGBOX_NPC
-	applymovement LOCALID_PENNY, LilycoveCity_PokemonTrainerFanClub_FaceLeft
+	applymovement LOCALID_PENNY, MossdeepCity_House2_Move_FaceRight
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, LilycoveCity_PokemonTrainerFanClub_FaceRight
+	msgbox LilycoveCity_PokemonTrainerFanClub_Text_Opening4, MSGBOX_AUTOCLOSE
+	applymovement OBJ_EVENT_ID_PLAYER, MossdeepCity_House2_Move_FaceUp
 	waitmovement 0
-	msgbox LilycoveCity_PokemonTrainerFanClub_Text_Opening4, MSGBOX_NPC
 	applymovement LOCALID_PENNY, LilycoveCity_PokemonTrainerFanClub_PennyUp2
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, LilycoveCity_PokemonTrainerFanClub_FaceUp
 	waitmovement 0
 	setflag FLAG_FAN_CLUB_STRENGTH_SHARED
 	setvar VAR_TEMP_2, 0
@@ -173,7 +185,11 @@ LilycoveCity_PokemonTrainerFanClub_EventScript_TV::
 	end
 
 LilycoveCity_PokemonTrainerFanClub_Text_TV:
-	.string "Nothing but speculation right now.\p"
+	.string "Nothing but speculation right now,\n"
+	.string "about what the announcement could be.\p"
+	.string "The leading theory is that they've\n"
+	.string "finally captured Archie, but it's\l"
+	.string "clear that no one has any real idea.\p"
 	.string "Penny's right - it's not worth\n"
 	.string "watching.$"
 

@@ -40,6 +40,18 @@ Route118_Text_SingleRock:
 	.string "now. Penny's waiting.$"
 
 
+Route118_EventScript_Phantom::
+	playmoncry SPECIES_POOCHYENA, CRY_MODE_NORMAL
+	msgbox Route118_Text_Phantom, MSGBOX_SIGN
+	waitmoncry
+	end
+
+Route118_Text_Phantom:
+	.string "Phantom is still staring intensely\n"
+	.string "at the creep.$"
+
+
+
 Route118_EventScript_HomesteadSign::
 	msgbox Route118_Text_HomesteadSign, MSGBOX_SIGN
 	end

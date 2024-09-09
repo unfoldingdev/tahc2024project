@@ -22,10 +22,10 @@ LilycoveCity_House1_EventScript_Gent::
 	end
 
 LilycoveCity_House1_Text_PokemonPartnersNotTools:
-	.string "POKéMON are partners to people.\n"
-	.string "They aren't our tools.\p"
-	.string "Unfortunately, there are some people\n"
-	.string "who fail to understand that…$"
+	.string "I thought the big announcement was\n"
+	.string "going to be about Archie.\p"
+	.string "Thank goodness it was just about\n"
+	.string "removing Hoenn's identity.$"
 
 
 LilycoveCity_House1_EventScript_Kecleon::

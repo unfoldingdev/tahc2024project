@@ -2,15 +2,15 @@
   "id": "MAP_MOSSDEEP_CITY",
   "name": "MossdeepCity",
   "layout": "LAYOUT_MOSSDEEP_CITY",
-  "music": "MUS_RUSTBORO",
+  "music": "MUS_ROUTE110",
   "region_map_section": "MAPSEC_MOSSDEEP_CITY",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
-  "map_type": "MAP_TYPE_CITY",
+  "map_type": "MAP_TYPE_INDOOR",
   "allow_cycling": true,
   "allow_escaping": false,
   "allow_running": true,
-  "show_map_name": true,
+  "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -114,12 +114,12 @@
       "flag": "FLAG_ITEM_MOSSDEEP_CITY_NET_BALL"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAN_1",
-      "x": 45,
+      "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+      "x": 47,
       "y": 34,
       "elevation": 7,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_range_x": 3,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
@@ -190,6 +190,45 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MossdeepCity_EventScript_Fisherman",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY_3",
+      "x": 44,
+      "y": 21,
+      "elevation": 7,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MossdeepCity_EventScript_HideAndSeek",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+      "x": 35,
+      "y": 28,
+      "elevation": 7,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MossdeepCity_EventScript_HouseLevels",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "x": 36,
+      "y": 36,
+      "elevation": 7,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MossdeepCity_EventScript_MySon",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -215,8 +254,8 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 39,
-      "y": 14,
+      "x": 40,
+      "y": 13,
       "elevation": 0,
       "dest_map": "MAP_MOSSDEEP_CITY_HOUSE2",
       "dest_warp_id": "1"
@@ -282,7 +321,7 @@
       "y": 34,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "MossdeepCity_EventScript_GymSign"
+      "script": "MossdeepCity_EventScript_GymSign1"
     },
     {
       "type": "sign",
@@ -302,11 +341,11 @@
     },
     {
       "type": "sign",
-      "x": 10,
-      "y": 21,
+      "x": 39,
+      "y": 14,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "MossdeepCity_EventScript_SpaceCenterSign"
+      "script": "MossdeepCity_EventScript_AreYouSureSean"
     },
     {
       "type": "sign",
@@ -338,7 +377,7 @@
       "y": 14,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "MossdeepCity_EventScript_CitySign"
+      "script": "MossdeepCity_EventScript_SeanSign"
     },
     {
       "type": "sign",
@@ -346,7 +385,7 @@
       "y": 17,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "MossdeepCity_EventScript_CitySign"
+      "script": "MossdeepCity_EventScript_BillSign"
     },
     {
       "type": "sign",
@@ -354,7 +393,7 @@
       "y": 28,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "MossdeepCity_EventScript_CitySign"
+      "script": "MossdeepCity_EventScript_CitySign1"
     }
   ]
 }

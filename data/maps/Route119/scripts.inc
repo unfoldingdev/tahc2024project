@@ -71,6 +71,26 @@ Route119_Text_NikkiPostBattle:
 	.string "to get me a full team of duckies!$"
 
 
+Route119_EventScript_Nicky::
+	trainerbattle_single TRAINER_CLARK, Route119_Text_NickyIntro, Route119_Text_NickyDefeat
+	msgbox Route119_Text_NickyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+
+Route119_Text_NickyIntro:
+	.string "NICKY: Nikki's duck is so strong!\p"
+	.string "But my fishy can also attack now!$"
+
+Route119_Text_NickyDefeat:
+	.string "Hahahahaha!$"
+
+Route119_Text_NickyPostBattle:
+	.string "NICKY: Look at fishy's cute face!$"
+
+
+
+
+
 
 Route119_EventScript_MagmaGrunt::
 	trainerbattle_single TRAINER_DONALD, Route119_Text_MagmaGruntIntro, Route119_Text_MagmaGruntDefeat
@@ -115,6 +135,8 @@ Route119_Text_AquaGruntPostBattle:
 	.string "He crippled my team!\p"
 	.string "He broke my 500 game win streak\n"
 	.string "against that Magma Grunt!\p"
+	.string "He made a kooky old man appear in\n"
+	.string "my pocket!\p"
 	.string "And worst of all, he changed my name\n"
 	.string "to Team Grunt, which sounds like a\l"
 	.string "caveman football league!$"
@@ -165,10 +187,10 @@ Route119_EventScript_MyLegsAreFine::
 	end
 
 Route119_Text_MyLegsAreFine:
-	.string "It's okay, my legs are fine!\p"
-	.string "And I understand the dangerous thing\n"
-	.string "now mama!$"
-
+	.string "I understand why deep water is\n"
+	.string "dangerous now mama!\p"
+	.string "If you had a tube like mine, you\n"
+	.string "could have bounced!$"
 
 
 Route119_EventScript_Captain::
@@ -207,7 +229,7 @@ Route119_Text_NotAccountable:
 	.string "Sir, you cannot possibly be trying to\n"
 	.string "hold the ferry service accountable for\l"
 	.string "the disappearance of the...\p"
-	.string "the path itself.$"
+	.string "the road itself.$"
 
 Route119_EventScript_Sailor::
 	msgbox Route119_Text_Sailor, MSGBOX_NPC
@@ -227,8 +249,8 @@ Route119_EventScript_Scientist::
 	end
 
 Route119_Text_Scientist:
-	.string "Wow, it's one thing to send out\n"
-	.string "a Seaking in a battle on land, and\l"
+	.string "Wow, it's one thing to send out a\n"
+	.string "Seaking in a battle on land, and\l"
 	.string "watch it float in midair...\p"
 	.string "But it's another to see them\n"
 	.string "rolling about here, unconcerned.\p"
@@ -246,7 +268,8 @@ Route119_Text_PokeFanF:
 	.string "replace the boring liquid that was\l"
 	.string "here with something more interesting.\p"
 	.string "Gravy, acid, paint... I always wondered\n"
-	.string "why they didn't think out of the box.$"
+	.string "why the developers didn't think out of\l"
+	.string "the box.$"
 
 
 Route119_EventScript_CaveLady::
@@ -265,27 +288,57 @@ Route119_Text_CaveLady:
 
 Route119_EventScript_NoStones::
 	lockall
-	faceplayer
-	goto_if_set FLAG_HIDDEN_ITEM_ROUTE_119_MAX_ETHER, Route119_EventScript_NoStonesGiven
+	goto_if_set FLAG_HIDDEN_ITEM_UNDERWATER_126_ULTRA_BALL, Route119_EventScript_NoStonesGiven
 	msgbox Route119_Text_NoStones, MSGBOX_NPC
-	giveitem ITEM_WATER_STONE
-	setflag FLAG_HIDDEN_ITEM_ROUTE_119_MAX_ETHER
+	giveitem ITEM_HARD_STONE
+	setflag FLAG_HIDDEN_ITEM_UNDERWATER_126_ULTRA_BALL
 	release
 	end
 
 Route119_Text_NoStones:
-	.string "Oh my god, they're useless!\n"
+	.string "Oh my god, they're useless!\p"
+	.string "Something happened, and my precious\n"
+	.string "Wa- uh, evolution stones turned into...\p"
+	.string "ROCKS!\p"
 	.string "My poor Pokemon!\p"
 	.string "Just look at this!$"
 
 Route119_EventScript_NoStonesGiven::
-	msgbox Route119_Text_NoStones, MSGBOX_NPC
+	msgbox Route119_Text_NoStonesGiven, MSGBOX_NPC
 	release
 	end
 
 Route119_Text_NoStonesGiven:
 	.string "Eviolite Lombre? Is that really\n"
-	.string "what I'm about to do?$"
+	.string "what I have to do?$"
+
+Route119_EventScript_Mystic::
+	msgbox Route119_Text_Mystic, MSGBOX_NPC
+	end
+
+Route119_Text_Mystic:
+	.string "Hello, young woman. Until recently,\n"
+	.string "I was attached to one of that fellow's\l"
+	.string "Pokemon, providing it a damage bonus.\p"
+	.string "But now, I plan to travel and seek\n"
+	.string "out the mysteries of the world.\p"
+	.string "The lost path is the one most sought!$"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Route119_EventScript_MoveInstituteWorkersDownstairs::
@@ -726,9 +779,13 @@ Route119_EventScript_Boy1::
 	msgbox Route119_Text_ThoughtFlyByCatchingBirdMons, MSGBOX_NPC
 	end
 
-Route119_EventScript_Boy2::
-	msgbox Route119_Text_CanYourMonMakeSecretBase, MSGBOX_NPC
+Route119_EventScript_Ship::
+	msgbox Route119_Text_Ship, MSGBOX_SIGN
 	end
+
+Route119_Text_Ship:
+	.string "The ship's underside is badly damaged.\n"
+	.string "It must have hit the ground hard.$"
 
 Route119_EventScript_TrainerTipsDecoration::
 	msgbox Route119_Text_TrainerTipsDecoration, MSGBOX_SIGN

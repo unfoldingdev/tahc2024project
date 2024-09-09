@@ -672,8 +672,8 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_DOWNLOAD] =
     {
-        .name = _("Download"),
-        .description = COMPOUND_STRING("Adjusts power favorably."),
+        .name = _("Torrent"),
+        .description = COMPOUND_STRING("Downloads from Internet?"),
         .aiRating = 7,
     },
 
@@ -1599,8 +1599,8 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_DISGUISE] =
     {
-        .name = _("Disguise"),
-        .description = COMPOUND_STRING("Decoy protects it once."),
+        .name = _("Veil"),
+        .description = COMPOUND_STRING("A protective veil?"),
         .aiRating = 8,
         .breakable = TRUE,
         .cantBeCopied = TRUE,

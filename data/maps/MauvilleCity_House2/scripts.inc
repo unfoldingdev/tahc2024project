@@ -1,6 +1,26 @@
 MauvilleCity_House2_MapScripts::
 	.byte 0
 
+MauvilleCity_House2_EventScript_Sean::
+	msgbox MauvilleCity_House2_Text_Sean, MSGBOX_NPC
+	release
+	end
+
+MauvilleCity_House2_Text_Sean:
+	.string "You know, it could have been worse.\n"
+	.string "Did you see what happened to Walter?$"
+
+
+MauvilleCity_House2_EventScript_TV::
+	msgbox MauvilleCity_House2_Text_TV, MSGBOX_DEFAULT
+	release
+	end
+
+MauvilleCity_House2_Text_TV:
+	.string "Maxie's shaking a lot of hands.\p"
+	.string "He looks a little too happy.$"
+
+
 MauvilleCity_House2_EventScript_Woman::
 	lock
 	faceplayer
