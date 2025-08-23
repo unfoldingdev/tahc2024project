@@ -13724,20 +13724,41 @@ Move_DYNAMAX_CANNON::
 	goto Move_HYPER_BEAM
 
 Move_SNIPE_SHOT::
-	loadspritegfx ANIM_TAG_IMPACT_2
-	loadspritegfx ANIM_TAG_LEER
-	createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_BG, 0, 0, 16, 0 @;Black
+	loadspritegfx ANIM_TAG_POWER_GEM @gem
+	loadspritegfx ANIM_TAG_AIR_WAVE @sonicboom
+	loadspritegfx ANIM_TAG_IMPACT @hit
+	loadspritegfx ANIM_TAG_FLASH_CANNON_BALL @ball
+	loadspritegfx ANIM_TAG_LOCK_ON
+	createsprite gLockOnTargetSpriteTemplate, ANIM_ATTACKER, 40
+	createsprite gLockOnMoveTargetSpriteTemplate, ANIM_ATTACKER, 40, 0x1
+	createsprite gLockOnMoveTargetSpriteTemplate, ANIM_ATTACKER, 40, 0x2
+	createsprite gLockOnMoveTargetSpriteTemplate, ANIM_ATTACKER, 40, 0x3
+	createsprite gLockOnMoveTargetSpriteTemplate, ANIM_ATTACKER, 40, 0x4
+	delay 0x78
+	setarg 0x7 0xffff
 	waitforvisualfinish
-	createsprite gLeerSpriteTemplate, ANIM_TARGET, 2, 0x18, -12
-	playsewithpan SE_M_DETECT, SOUND_PAN_ATTACKER
+	monbg ANIM_DEF_PARTNER
+	splitbgprio ANIM_TARGET
+	setalpha 12, 8
+	call SonicBoomProjectile
+	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 3, 0, 10, 1
+	loadspritegfx ANIM_TAG_FLASH_CANNON_BALL
+	createsprite gSmartStrikeImpactTemplate, ANIM_TARGET, 4, 0x0, 0x0, 0x8, 0x1, 0x0
+	playsewithpan SE_M_VITAL_THROW2, SOUND_PAN_TARGET
+	createsprite gSmartStrikeGemTemplate, ANIM_TARGET, 2, 0x1, 0x1, 0x0, 0xffe8, 0xa
+	createsprite gSmartStrikeGemTemplate, ANIM_TARGET, 2, 0x1, 0x1, 0x11, 0xffef, 0xa
+	createsprite gSmartStrikeGemTemplate, ANIM_TARGET, 2, 0x1, 0x1, 0x18, 0x0, 0xa
+	createsprite gSmartStrikeGemTemplate, ANIM_TARGET, 2, 0x1, 0x1, 0x11, 0x11, 0xa
+	createsprite gSmartStrikeGemTemplate, ANIM_TARGET, 2, 0x1, 0x1, 0x0, 0x18, 0xa
+	createsprite gSmartStrikeGemTemplate, ANIM_TARGET, 2, 0x1, 0x1, 0xffef, 0x11, 0xa
+	createsprite gSmartStrikeGemTemplate, ANIM_TARGET, 2, 0x1, 0x1, 0xffe8, 0x0, 0xa
+	createsprite gSmartStrikeGemTemplate, ANIM_TARGET, 2, 0x1, 0x1, 0xffef, 0xffef, 0xa
 	waitforvisualfinish
-	delay 0x20
-	playsewithpan SE_M_GIGA_DRAIN, SOUND_PAN_TARGET
-	createsprite gSnipeShotBallTemplate, ANIM_TARGET, 2, 0, 0, 16
+	clearmonbg ANIM_DEF_PARTNER
+	blendoff
 	waitforvisualfinish
-	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 4, 0, 8, 1
-	waitforvisualfinish
-	createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_BG, 0, 16, 0, 0 @;Black
+	clearmonbg ANIM_ATTACKER
+	blendoff
 	waitforvisualfinish
 	end
 

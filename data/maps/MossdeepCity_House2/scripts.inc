@@ -49,6 +49,7 @@ MossdeepCity_House2_Cutscene::
 	callnative SetPlayerNameToChel
 	msgbox MossdeepCity_House2_Text_SeanCutscene4, MSGBOX_AUTOCLOSE
 	setrespawn HEAL_LOCATION_FORTREE_CITY
+	clearflag FLAG_BADGE08_GET
 	callnative GetFirstMonLevel
 	givemon SPECIES_CROCONAW, VAR_RESULT
 	setvar VAR_RESULT, 0

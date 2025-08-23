@@ -39,11 +39,11 @@ MossdeepCity_PokemonCenter_1F_Text_AbilitiesMightChangeMoves:
 	.string "So, three contests at the same time,\n"
 	.string "huh?\p"
 	.string "It means a ton of games for people\n"
-	.string "play, so it's fine!$"
+	.string "to play, so it's fine!$"
 
 MossdeepCity_PokemonCenter_1F_Text_Girl2:
-	.string "Yeah, no one would try to juggle all\n"
-	.string "three contests...\p"
+	.string "Surely no one would try to juggle\n"
+	.string "all three contests...\p"
 	.string "That would be like telling everyone\n"
 	.string "that they have no life!$"
 

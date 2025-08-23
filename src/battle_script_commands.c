@@ -17010,3 +17010,13 @@ void BS_TryQuash(void)
     }
     gBattlescriptCurrInstr = cmd->nextInstr;
 }
+
+void BS_JumpIfNoPokedex(void)
+{
+    NATIVE_ARGS(const u8 *jumpInstr);
+    
+    if (!FlagGet(FLAG_SYS_POKEDEX_GET))
+        gBattlescriptCurrInstr = cmd->jumpInstr;
+    else
+        gBattlescriptCurrInstr = cmd->nextInstr;
+}

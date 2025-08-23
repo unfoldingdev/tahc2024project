@@ -32,7 +32,7 @@ Route119_EventScript_LedgeGuy::
 
 Route119_Text_LedgeGuy:
 	.string "Okay, I got this far climbing on the\n"
-	.string "seaweed, but there's not enough here.\p"
+	.string "weeds, but there's not enough here.\p"
 	.string "I think we might have to jump for it\n"
 	.string "at that spot right there.$"
 
@@ -187,7 +187,7 @@ Route119_EventScript_MyLegsAreFine::
 	end
 
 Route119_Text_MyLegsAreFine:
-	.string "I understand why deep water is\n"
+	.string "I understand why the deep part is\n"
 	.string "dangerous now mama!\p"
 	.string "If you had a tube like mine, you\n"
 	.string "could have bounced!$"
@@ -250,7 +250,7 @@ Route119_EventScript_Scientist::
 
 Route119_Text_Scientist:
 	.string "Wow, it's one thing to send out a\n"
-	.string "Seaking in a battle on land, and\l"
+	.string "fish in a battle on land, and\l"
 	.string "watch it float in midair...\p"
 	.string "But it's another to see them\n"
 	.string "rolling about here, unconcerned.\p"

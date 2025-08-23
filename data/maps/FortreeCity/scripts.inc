@@ -260,7 +260,7 @@ FortreeCity_Text_UsedDevonScopePokemonFled:
 	.string "The startled POKéMON fled!$"
 
 FortreeCity_Text_CitySign:
-	.string "THE WETRIXES$"
+	.string "THE DRYRIXES$"
 
 FortreeCity_Text_GymSign:
 	.string "MERIS VILLAGE POKéMON GYM\n"

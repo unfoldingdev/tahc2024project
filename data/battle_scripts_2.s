@@ -168,6 +168,7 @@ BattleScript_PrintCaughtMonInfo::
 BattleScript_TryPrintCaughtMonInfo:
 	jumpifbattletype BATTLE_TYPE_RECORDED, BattleScript_GiveCaughtMonEnd
 	trysetcaughtmondexflags BattleScript_TryNicknameCaughtMon
+        jumpifnopokedex BattleScript_TryNicknameCaughtMon
 	printstring STRINGID_PKMNDATAADDEDTODEX
 	waitstate
 	setbyte gBattleCommunication, 0

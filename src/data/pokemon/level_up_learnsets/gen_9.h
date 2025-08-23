@@ -15052,9 +15052,9 @@ static const struct LevelUpMove sFrogadierLevelUpLearnset[] = {
 
 static const struct LevelUpMove sGreninjaLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_WATER_SHURIKEN),
-    LEVEL_UP_MOVE(19, MOVE_SMOKESCREEN),
+    LEVEL_UP_MOVE(19, MOVE_QUICK_ATTACK),
     LEVEL_UP_MOVE(20, MOVE_SUBSTITUTE),
-    LEVEL_UP_MOVE(21, MOVE_DOUBLE_TEAM),
+    LEVEL_UP_MOVE(21, MOVE_ROUND),
     LEVEL_UP_END
 };
 #endif //P_FAMILY_FROAKIE
